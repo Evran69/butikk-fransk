@@ -1,64 +1,2217 @@
-<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Le Petit Marché – ferdig butikkspill</title>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Panique ! · Fransk kaféspill for skolen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#173b63;--blue:#2873ad;--green:#268653;--red:#d43b3f;--gold:#f2b83f;--cream:#fff8e8;--ink:#172234;--muted:#647184}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:linear-gradient(135deg,#e8f4ff,#fff6df);min-height:100vh}button,input{font:inherit}button{border:0;border-radius:11px;padding:11px 16px;font-weight:800;cursor:pointer;background:var(--navy);color:#fff}button:hover{filter:brightness(1.08)}button.alt{background:#edf3f8;color:var(--navy)}button.good{background:var(--green)}button.gold{background:var(--gold);color:#4a3200}button:disabled{opacity:.55;cursor:not-allowed}header{position:sticky;top:0;z-index:20;color:#fff;background:linear-gradient(90deg,var(--navy),#215d91);box-shadow:0 3px 15px #0003}.head{max-width:1240px;margin:auto;padding:13px 18px;display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand{font-size:1.35rem;font-weight:900}.topbuttons,.stats,.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.pill{background:#ffffff20;border:1px solid #ffffff44;padding:7px 11px;border-radius:999px;font-weight:800}.progress{height:8px;background:#ffffff35}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#ffd166,#62e69b);transition:.35s}main{max-width:1240px;margin:22px auto;padding:0 16px 70px}.screen{display:none}.screen.active{display:block}.panel{background:#fff;border-radius:20px;padding:clamp(18px,3vw,30px);box-shadow:0 12px 36px #17324c17}.hero{text-align:center}.heroIcon{font-size:4.8rem}.hero h1,.cert h2{font-family:Georgia,serif;color:var(--navy)}.lead{max-width:850px;margin:10px auto 18px;color:#46556a}.name{padding:12px 14px;border:2px solid #b9cadb;border-radius:10px;max-width:340px;width:100%}.levelGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:13px;margin-top:18px}.levelCard{padding:16px;border:2px solid #d9e5ef;border-radius:15px;background:#fbfdff;cursor:pointer;transition:.18s}.levelCard:hover{transform:translateY(-3px);border-color:var(--blue)}.levelCard h3{margin:6px 0}.levelCard p{font-size:.9rem;color:var(--muted);margin:4px 0}.num,.badge{display:inline-block;background:#e6f1ff;color:#174c79;border-radius:8px;padding:5px 9px;font-weight:900}.boss{background:#fff8df;border-color:var(--gold)}.gameHead{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.mission{background:var(--cream);border-left:6px solid var(--gold);padding:18px;border-radius:12px;margin:14px 0}.frtext{font-size:1.25rem;font-weight:850}.hint,.small{color:var(--muted);font-size:.88rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:11px;margin:16px 0}.product{border:2px solid #d8e3ed;border-radius:14px;padding:12px;background:#fff;text-align:center;cursor:pointer;min-height:137px;transition:.15s}.product:hover{transform:translateY(-2px);border-color:var(--blue)}.product.selected{background:#e6f7ed;border-color:var(--green)}.product.correct{box-shadow:0 0 0 4px #3bbb7544;border-color:var(--green)}.emoji{font-size:2.5rem}.fr{font-weight:900}.no{color:var(--muted);font-size:.84rem}.price{color:#9a5017;font-weight:800}.qty{display:flex;justify-content:center;gap:7px;align-items:center;margin-top:7px}.qty button{padding:3px 9px}.feedback{min-height:48px;text-align:center;font-weight:900;font-size:1.08rem;padding:10px}.options{display:grid;gap:10px;max-width:800px;margin:18px auto}.option,.dept{background:#f4f8fb;color:var(--ink);border:2px solid #d9e4ed;text-align:left}.option.chosen,.dept.chosen{outline:4px solid var(--gold)}.option.correct,.dept.correct{background:#e0f5e8;border-color:var(--green)}.option.wrong,.dept.wrong{background:#fde3e3;border-color:var(--red)}.deptGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.dept{padding:22px;font-size:1.05rem}.baskets{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.basket{border:3px dashed #a9bbcb;border-radius:14px;padding:13px;min-height:110px;background:#f9fbfd}.offer{font-size:1.15rem;background:#fff1be;border:3px dashed #d79800;border-radius:15px;padding:20px;text-align:center}.grammar{background:#edf7ff;border:2px solid #94c9ee;padding:13px;border-radius:12px;margin-top:10px}.hintLevel{display:inline-block;background:#fff1be;color:#704900;padding:5px 9px;border-radius:20px;font-size:.8rem;margin-bottom:7px}.grammarTitle{font-weight:900;color:#174c79;margin-bottom:8px}.grammarParts{display:flex;gap:8px;flex-wrap:wrap}.grammarPart{display:flex;flex-direction:column;gap:3px;background:#fff;border:1px solid #9dc8e8;border-radius:10px;padding:8px 10px}.grammarPart b{color:#174c79}.grammarPart small{color:#58677a}.reportGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0}.reportCard{background:#f7fafc;border:2px solid #d9e5ef;border-radius:14px;padding:14px}.reportCard h3{margin:0 0 8px;color:#174c79}.reportList{margin:8px 0;padding-left:20px}.reportTable{width:100%;border-collapse:collapse;font-size:.9rem}.reportTable th,.reportTable td{border-bottom:1px solid #dbe4ec;padding:8px;text-align:left}.reportTable th{background:#edf5fb}.grammar span{display:inline-block;margin:4px;padding:6px 9px;border-radius:8px;font-weight:800;background:#dbeafe}.teacherPanel{display:none;background:#102b49;color:#fff;border-radius:14px;padding:15px;margin:13px 0}.teacherPanel.show{display:block}.teacherPanel button{background:#ffffff20;border:1px solid #ffffff55}.countdown{font-size:2rem;font-weight:900;color:var(--red);text-align:center}.readyBox{background:#eef9f2;border:2px solid #8bd2a7;border-radius:14px;padding:18px;text-align:center;margin:14px 0}.readyBox p{margin:0 0 12px}.cert{max-width:850px;margin:auto;border:12px double var(--gold);padding:34px;text-align:center;background:#fffdf5}.rank{display:inline-block;background:var(--navy);color:#fff;padding:8px 15px;border-radius:99px;font-weight:900}.modeBox{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}.modeBtn.active{outline:4px solid var(--gold)}.levelCard.locked{opacity:.55;filter:grayscale(.45);cursor:not-allowed}.levelCard.locked:hover{transform:none;border-color:#d9e5ef}.lockNote{font-size:.78rem;color:#8a4b11;font-weight:800}body.memoryMode .frtext{visibility:hidden}body.memoryMode .hint{visibility:visible}body.memoryMode .product .fr,body.memoryMode .product .no{display:block}.skipped{color:#a14c12;font-weight:800}.hidden{display:none!important}body.board{font-size:125%}body.board main{max-width:1500px}body.blackout .frtext,body.blackout .hint{visibility:hidden}body.blackout .fr,body.blackout .no{display:none}@media(max-width:620px){.topbuttons{display:flex;width:100%;justify-content:center}.topbuttons button:first-child,.topbuttons button:nth-child(2){display:none}.grid{grid-template-columns:repeat(2,1fr)}.head{padding:10px}.heroIcon{font-size:3.5rem}}@media print{header,.actions,.noPrint,.teacherPanel{display:none!important}body{background:#fff}.screen{display:none!important}#finish{display:block!important}.panel{box-shadow:none}}
-</style></head><body>
-<header><div class="head"><div class="brand">🛒 Le Petit Marché</div><div class="topbuttons"><button class="alt" onclick="toggleBoard()">🖥 Tavle</button><button class="alt" onclick="toggleTeacher()">👨‍🏫 Lærer</button><button class="alt" onclick="showLevels()">🏠 Nivåer</button></div><div class="stats"><span class="pill">Poeng <b id="score">0</b></span><span class="pill">⭐ <b id="stars">0</b></span><span class="pill"><b id="step">0</b>/<b id="total">0</b></span></div></div><div class="progress"><div id="bar"></div></div></header>
-<main><section id="start" class="screen active"><div class="panel hero"><div class="heroIcon">🏪🇫🇷</div><h1>Le Petit Marché</h1><p class="lead">Fransk butikkspill med handlelister, avdelinger, lytting, tilbud, situasjoner i Paris, mysterier, handlekurver, kasseregning og sluttoppdrag.</p><input id="studentName" class="name" placeholder="Skriv elevens navn"><div class="modeBox"><button id="modeTraining" class="modeBtn active good" onclick="setGameMode('training')">🎓 Treningsmodus</button><button id="modeCompetition" class="modeBtn alt" onclick="setGameMode('competition')">🏆 Konkurransemodus</button></div><p id="modeDescription" class="small">Ubegrenset tid, norsk støtte og tydelig fasit.</p><div class="actions" style="justify-content:center;margin-top:14px"><button onclick="showLevels()">Velg nivå</button><button class="good" onclick="startCampaign()">Start hele kampanjen</button></div><p id="savedProgress" class="small"></p></div></section>
-<section id="levels" class="screen"><div class="panel"><div class="gameHead"><div><h2>Velg nivå</h2><p class="small">Kampanjen går gjennom alle nivåene i rekkefølge.</p></div><button class="good" onclick="startCampaign()">▶ Hele kampanjen</button></div><div class="levelGrid" id="levelGrid"></div></div></section>
-<section id="game" class="screen"><div class="panel"><div class="gameHead"><div><span class="badge" id="levelBadge"></span><h2 id="taskTitle"></h2></div><div class="actions"><button class="alt" onclick="speakCurrent(.9)">🔊 Lytt</button><button class="alt" onclick="speakCurrent(.65)">🐢 Sakte</button><button class="gold" onclick="explainCurrentSentence()">🔍 Forklar setningen</button></div></div><div class="teacherPanel" id="teacherPanel"><b>Lærerpanel</b><div class="actions"><button onclick="toggleGrammar()">Grammatikk</button><button onclick="revealAnswer()">Vis fasit</button><button onclick="skipTask()">Hopp over</button><button onclick="toggleBlackout()">Blackout</button></div></div><div class="mission"><div class="frtext" id="promptFr"></div><div class="hint" id="promptNo"></div><div id="grammar" class="grammar hidden"></div></div><div id="taskArea"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="actions" style="justify-content:center"><button id="checkBtn" class="good" onclick="checkTask()">Kontroller</button><button id="nextBtn" class="hidden" onclick="nextTask()">Neste →</button></div></div></section>
-<section id="finish" class="screen"><div class="panel"><div class="cert"><div style="font-size:4rem">🏆</div><h2>Diplôme du Petit Marché</h2><p>Dette bekrefter at</p><h3 id="certName" style="font-size:2rem"></h3><p>har gjennomført franske butikkoppdrag.</p><div class="rank" id="rank"></div><h3 id="finalScore"></h3><p id="summary"></p><p><i>Bravo et merci !</i></p><div id="date"></div></div><div id="learningReport"></div><div class="actions noPrint" style="justify-content:center"><button onclick="window.print()">🖨 Skriv ut diplom og rapport</button><button class="alt" onclick="downloadReport()">📥 Last ned lærerrapport</button><button class="alt" onclick="showLevels()">Velg nytt nivå</button></div></div></section></main>
-<script>
-const P=[['pain','un pain','et brød','🍞',2],['baguette','une baguette','en bagett','🥖',2],['lait','du lait','melk','🥛',2],['pomme','une pomme','et eple','🍎',1],['banane','une banane','en banan','🍌',1],['fromage','du fromage','ost','🧀',4],['yaourt','un yaourt','en yoghurt','🥣',2],['jus','du jus','juice','🧃',3],['eau',"de l'eau",'vann','💧',2],['oeufs','des œufs','egg','🥚',3],['beurre','du beurre','smør','🧈',3],['chocolat','du chocolat','sjokolade','🍫',3],['bonbons','des bonbons','godteri','🍬',3],['savon','un savon','såpe','🧼',2],['papier','du papier toilette','toalettpapir','🧻',4],['dentifrice','du dentifrice','tannkrem','🪥',3],['gateau','un gâteau','en kake','🎂',8],['sandwich','un sandwich','en sandwich','🥪',5],['croissant','un croissant','en croissant','🥐',2]].map(x=>({id:x[0],fr:x[1],no:x[2],e:x[3],p:x[4]}));
-const L=[['Grunnvarer','Enkle handlelister','🛒'],['Finn avdelingen','Bakeri, meieri og hygiene','🏬'],['Hør og husk','Lytteforståelse','👂'],['Flere kunder','Riktig handlekurv','🧺'],['Tilbudsjakt','Prisregning','🏷️'],['Handleliste på tid','Start med Jeg er klar','⏱️'],['Hva trenger personen?','Situasjonsforståelse','💡'],['Hva mangler?','Finn manglende vare','❓'],['Tema og Paris','Bursdag, piknik og reise','🗼'],['Mysterie og Blackout','Ledetråder og lyd','🕵️'],['Sluttboss','Ukeshandel og kasse','👑']].map((x,i)=>({id:i+1,name:x[0],desc:x[1],icon:x[2]}));
-const T=[
-{l:1,title:'Enkel handleliste',type:'pick',fr:"Je voudrais un pain et du lait, s'il vous plaît.",no:'Velg brød og melk.',need:{pain:1,lait:1}},{l:1,title:'Antall og flertall',type:'pick',fr:'Je voudrais deux pommes et trois yaourts.',no:'Velg riktig antall.',need:{pomme:2,yaourt:3}},{l:1,title:'Nektelse',type:'pick',fr:'Du fromage et du jus, mais pas de chocolat.',no:'Ikke velg sjokolade.',need:{fromage:1,jus:1},forbid:['chocolat']},
-{l:2,title:'Finn bakeriet',type:'choice',fr:'Je cherche une baguette.',no:'Hvilken avdeling?',answer:'Bakeri',options:['Bakeri','Frukt','Hygiene','Drikke']},{l:2,title:'Finn meieriet',type:'choice',fr:'Je voudrais du fromage et un yaourt.',no:'Hvilken avdeling?',answer:'Meieri',options:['Godteri','Meieri','Bakeri','Hygiene']},{l:2,title:'Finn hygieneavdelingen',type:'choice',fr:'Il me faut du dentifrice.',no:'Hvor finner du varen?',answer:'Hygiene',options:['Frukt','Drikke','Hygiene','Ferdigmat']},
-{l:3,title:'Hør og husk',type:'memory',fr:'Je voudrais du lait, deux pommes, un yaourt et du beurre.',no:'Spill bestillingen og handle fra hukommelsen.',need:{lait:1,pomme:2,yaourt:1,beurre:1}},{l:3,title:'Avansert lytting',type:'memory',fr:"Bonjour. Je voudrais deux pommes, un yaourt et une bouteille d'eau.",no:'Lytt og velg.',need:{pomme:2,yaourt:1,eau:1}},
-{l:4,title:'Tre kunder',type:'customers',fr:'Camille : une pomme et du jus. Lucas : du fromage et du pain. Léa : trois bananes.',no:'Fordel varene.',customers:[{n:'Camille',need:{pomme:1,jus:1}},{n:'Lucas',need:{fromage:1,pain:1}},{n:'Léa',need:{banane:3}}]},
-{l:5,title:'Tilbud på epler',type:'choice',fr:'Deux pommes coûtent un euro. Combien coûtent six pommes ?',no:'Velg riktig pris.',answer:'3 €',options:['2 €','2,50 €','3 €','4 €']},{l:5,title:'Tilbud på yoghurt',type:'choice',fr:'Trois yaourts coûtent quatre euros. Combien coûtent six yaourts ?',no:'Velg riktig pris.',answer:'8 €',options:['6 €','7 €','8 €','12 €']},
-{l:6,title:'Handleliste på tid',type:'timed',seconds:35,fr:'Liste : du lait, du beurre, des œufs et une banane.',no:'Se over oppgaven. Trykk Jeg er klar når du vil starte.',need:{lait:1,beurre:1,oeufs:1,banane:1}},
-{l:7,title:'Pusse tennene',type:'product',fr:'Je vais me brosser les dents.',no:'Hva trenger personen?',answer:'dentifrice',options:['dentifrice','papier','jus','savon']},{l:7,title:'Tørst',type:'product',fr:"J'ai soif.",no:'Hva passer best?',answer:'eau',options:['eau','beurre','fromage','papier']},{l:7,title:'Vaske hendene',type:'product',fr:'Je cherche quelque chose pour me laver les mains.',no:'Hva trenger personen?',answer:'savon',options:['savon','dentifrice','chocolat','lait']},
-{l:8,title:'Varen som mangler',type:'product',fr:'Il y a du pain, du lait et une pomme. Il manque le beurre.',no:'Hvilken vare mangler?',answer:'beurre',options:['beurre','jus','savon','fromage']},
-{l:9,title:'Bursdag',type:'pick',fr:'Pour mon anniversaire, il faut un gâteau, du chocolat, du jus et des bonbons.',no:'Handle til bursdagen.',need:{gateau:1,chocolat:1,jus:1,bonbons:1}},{l:9,title:'Piknik',type:'pick',fr:"Du pain, du fromage, de l'eau et deux pommes.",no:'Handle til piknik.',need:{pain:1,fromage:1,eau:1,pomme:2}},{l:9,title:'Skoledag',type:'pick',fr:"Pour l'école : un sandwich, une pomme et du jus.",no:'Handle til skolen.',need:{sandwich:1,pomme:1,jus:1}},{l:9,title:'På hotellet',type:'product',fr:"À l'hôtel, il n'y a plus de savon.",no:'Hva må kjøpes?',answer:'savon',options:['savon','papier','eau','chocolat']},{l:9,title:'På togstasjonen',type:'product',fr:"À la gare, j'ai faim. Je voudrais un croissant.",no:'Hva passer?',answer:'croissant',options:['croissant','savon','eau','dentifrice']},{l:9,title:'Varm dag i Paris',type:'product',fr:"Il fait chaud et j'ai soif.",no:'Hva passer best?',answer:'eau',options:['eau','fromage','beurre','papier']},
-{l:10,title:'Hvem eier posen?',type:'choice',fr:"J'aime les bananes. Je n'aime pas le chocolat. J'achète du lait.",no:'Hvilken pose passer?',answer:'B',options:['A: chocolat, jus et pommes','B: bananes, lait et pain','C: chocolat, lait et bonbons']},{l:10,title:'Blackout Challenge',type:'blackout',fr:'Je voudrais trois œufs et deux bananes.',no:'Trykk lydknappen og velg riktige varer.',need:{oeufs:3,banane:2}},
-{l:11,title:'Sluttboss: Ukeshandel',type:'boss',maxPoints:200,fr:"Deux pommes, trois yaourts, du fromage, deux bouteilles d'eau, du beurre, du chocolat, un savon et du dentifrice.",no:'Finn alle varene.',need:{pomme:2,yaourt:3,fromage:1,eau:2,beurre:1,chocolat:1,savon:1,dentifrice:1}},{l:11,title:'Sluttboss: Kassen',type:'choice',fr:'Ça fait combien ?',no:'Regn ut: 2 + 6 + 4 + 4 + 3 + 3 + 2 + 3.',answer:'27 €',options:['24 €','25 €','27 €','30 €']}
-];
-let campaign=[],idx=0,score=0,stars=0,sel={},locked=false,timer=null,timeLeft=0,teacher=false,gameMode='training',completedLevels=[],bestScore=0,attempts=0,currentMistakes=0,taskResults=[],vocabStats={},audioPlays=0;
-const $=id=>document.getElementById(id),findP=id=>P.find(x=>x.id===id);
-function screen(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active')}
-function loadProgress(){try{let d=JSON.parse(localStorage.getItem('petitMarcheProgress')||'{}');completedLevels=Array.isArray(d.completedLevels)?d.completedLevels:[];bestScore=Number(d.bestScore)||0;gameMode=d.gameMode||'training';$('studentName').value=d.studentName||''}catch(e){completedLevels=[]}setGameMode(gameMode,false);updateSavedProgress()}
-function saveProgress(){try{let d={completedLevels,bestScore,gameMode,studentName:$('studentName').value.trim()};localStorage.setItem('petitMarcheProgress',JSON.stringify(d))}catch(error){console.warn('Kunne ikke lagre fremdrift.',error)}updateSavedProgress()}
-function updateSavedProgress(){let el=$('savedProgress');if(el)el.textContent=`Lagret fremdrift: ${completedLevels.length} nivåer fullført. Beste poengsum: ${bestScore}.`}
-function setGameMode(mode,save=true){gameMode=mode;let training=mode==='training';$('modeTraining')?.classList.toggle('active',training);$('modeCompetition')?.classList.toggle('active',!training);$('modeDescription')&&( $('modeDescription').textContent=training?'Ubegrenset tid, norsk støtte og tydelig fasit.':'Poengtrekk ved feil, mindre norsk støtte og tidsfrist på handleoppdraget.');if(save)saveProgress()}
-function isLevelUnlocked(id){return teacher||id===1||completedLevels.includes(id)||completedLevels.includes(id-1)}
-function buildLevels(){$('levelGrid').innerHTML=L.map(x=>{let open=isLevelUnlocked(x.id);return `<div class="levelCard ${x.id===11?'boss':''} ${open?'':'locked'}" ${open?`onclick="startLevel(${x.id})"`:''}><span class="num">${x.icon} Nivå ${x.id}</span><h3>${x.name}</h3><p>${x.desc}</p>${open?'':'<div class="lockNote">🔒 Fullfør forrige nivå først</div>'}</div>`}).join('')}
-function showLevels(){clearInterval(timer);timer=null;document.body.classList.remove('blackout','memoryMode');buildLevels();screen('levels')}
-function startCampaign(){campaign=[...T];startRun()}
-function startLevel(l){if(!isLevelUnlocked(l))return;campaign=T.filter(t=>t.l===l);startRun()}
-function startRun(){idx=0;score=0;stars=0;attempts=0;currentMistakes=0;taskResults=[];vocabStats={},audioPlays=0;saveProgress();screen('game');render()}
-function updateStats(){$('score').textContent=score;$('stars').textContent=stars;$('step').textContent=campaign.length?idx+1:0;$('total').textContent=campaign.length;$('bar').style.width=(campaign.length?idx/campaign.length*100:0)+'%'}
+  :root {
+    --bistro-bg: #f8f6f0;
+    --bistro-card: #ffffff;
+    --bistro-navy: #0f172a;
+    --bistro-navy-light: #1e293b;
+    --bistro-wood: #2c1810;
+    --bistro-wine: #991b1b;
+    --bistro-wine-hover: #7f1d1d;
+    --bistro-gold: #d97706;
+    --bistro-gold-light: #fef3c7;
+    --bistro-green: #15803d;
+    --bistro-green-light: #dcfce7;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-card: rgba(15, 23, 42, 0.08);
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 10px 25px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+    --shadow-lg: 0 20px 35px -5px rgba(15, 23, 42, 0.12);
+  }
 
-function render(){clearInterval(timer);timer=null;locked=false;sel={};currentMistakes=0;audioPlays=0;document.body.classList.remove('blackout','memoryMode');let t=campaign[idx];$('levelBadge').textContent='Nivå '+t.l;$('taskTitle').textContent=t.title;$('promptFr').textContent=t.fr;$('promptNo').textContent=gameMode==='competition'?'':t.no;$('feedback').textContent='';$('grammar').classList.add('hidden');$('checkBtn').classList.toggle('hidden',t.type==='timed'&&gameMode==='competition');$('nextBtn').classList.add('hidden');updateStats();let a=$('taskArea');a.innerHTML='';if(['pick','timed','memory','blackout','boss'].includes(t.type)){renderProducts(a,t);if(t.type==='memory'){document.body.classList.add('memoryMode');$('promptFr').textContent='••• Lytteoppgave •••';$('promptNo').textContent='Trykk på knappen for å høre bestillingen. Varene vises etter avspillingen.';a.querySelector('.grid')?.classList.add('hidden');a.insertAdjacentHTML('afterbegin','<div id="memoryStart" class="actions" style="justify-content:center"><button class="gold" onclick="playMemory()">▶ Spill bestillingen</button></div>')};if(t.type==='blackout'){document.body.classList.add('blackout');a.insertAdjacentHTML('afterbegin','<div class="actions" style="justify-content:center"><button class="gold" onclick="speakCurrent(.82)">🔊 Spill av Blackout-oppgaven</button></div>')}if(t.type==='timed'){if(gameMode==='competition')showReady(a,t.seconds);else $('checkBtn').classList.remove('hidden')}}else if(t.type==='customers')renderCustomers(a,t);else renderOptions(a,t)}
-function renderProducts(a,t){let g=document.createElement('div');g.className='grid';let needed=[...new Set([...Object.keys(t.need||{}),...(t.forbid||[])])],pool=P;if(t.l<=2){let distractors=P.filter(p=>!needed.includes(p.id)).slice(0,Math.max(0,8-needed.length));pool=[...P.filter(p=>needed.includes(p.id)),...distractors]}else if(t.l<=5){let distractors=P.filter(p=>!needed.includes(p.id)).slice(0,Math.max(0,12-needed.length));pool=[...P.filter(p=>needed.includes(p.id)),...distractors]}g.innerHTML=pool.map(p=>`<div class="product" data-id="${p.id}" onclick="qty('${p.id}',1)"><div class="emoji">${p.e}</div><div class="fr">${p.fr}</div><div class="no">${p.no}</div><div class="price">${p.p} €</div><div class="qty"><button aria-label="Trekk fra" onclick="event.stopPropagation();qty('${p.id}',-1)">−</button><b id="q-${p.id}">0</b><button aria-label="Legg til" onclick="event.stopPropagation();qty('${p.id}',1)">+</button></div></div>`).join('');a.appendChild(g)}function qty(id,n){if(locked)return;sel[id]=Math.max(0,Math.min(9,(sel[id]||0)+n));$('q-'+id).textContent=sel[id];document.querySelector(`[data-id="${id}"]`).classList.toggle('selected',sel[id]>0)}
-function renderOptions(a,t){let o=document.createElement('div');o.className='options';o.innerHTML=t.options.map(x=>{let value=t.type==='choice'&&x.includes(':')?x[0]:x,label=x;if(t.type==='product'){let p=findP(x);label=p.e+' '+p.fr}return `<button class="option" data-value="${value}" onclick="choose('${value.replaceAll("'","\\'")}',this)">${label}</button>`}).join('');a.appendChild(o)}function choose(v,b){if(locked)return;sel={answer:v};document.querySelectorAll('.option').forEach(x=>x.classList.remove('chosen'));b.classList.add('chosen')}
-function renderCustomers(a,t){sel={assign:{}};let totals={};t.customers.forEach(c=>Object.entries(c.need).forEach(([id,n])=>totals[id]=(totals[id]||0)+n));a.innerHTML='<div class="grid">'+Object.entries(totals).map(([id,n])=>{let p=findP(id);return `<div class="product"><div class="emoji">${p.e}</div><div class="fr">${n} × ${p.fr}</div><div class="options">${t.customers.map((c,i)=>`<button class="option" onclick="assignCustomer('${id}',${i},this)">${c.n}</button>`).join('')}</div></div>`}).join('')+'</div><div class="baskets">'+t.customers.map((c,i)=>`<div class="basket"><h3>🧺 ${c.n}</h3><div id="basket-${i}" class="small">Kurven er tom</div></div>`).join('')+'</div>'}function assignCustomer(id,i,b){if(locked)return;sel.assign[id]=i;b.closest('.options').querySelectorAll('button').forEach(x=>x.classList.remove('chosen'));b.classList.add('chosen');let t=campaign[idx];t.customers.forEach((c,ci)=>{$('basket-'+ci).innerHTML=Object.entries(sel.assign).filter(([,v])=>v===ci).map(([pid])=>{let p=findP(pid),n=t.customers.reduce((s,x)=>s+(x.need[pid]||0),0);return `${n} × ${p.e} ${p.fr}`}).join('<br>')||'Kurven er tom'})}
-function showReady(a,sec){let d=document.createElement('div');d.className='readyBox';d.id='readyBox';d.innerHTML='<p>Timeren har ikke startet. Se over oppgaven først.</p><button class="good" onclick="startTimedChallenge('+sec+')">✅ Jeg er klar</button>';a.prepend(d)}function startTimedChallenge(sec){if(timer||locked)return;$('readyBox')?.remove();$('checkBtn').classList.remove('hidden');$('feedback').textContent='🚀 Kjør!';startTimer(sec)}function startTimer(sec){timeLeft=sec;let d=document.createElement('div');d.className='countdown';d.id='countdown';$('taskArea').prepend(d);d.textContent='⏱️ '+timeLeft+' s';timer=setInterval(()=>{timeLeft--;d.textContent='⏱️ '+timeLeft+' s';if(timeLeft<=0){clearInterval(timer);timer=null;currentMistakes=3;checkTask()}},1000)}function playMemory(){speakCurrent(.86);$('promptFr').textContent='••• Bestillingen er skjult •••';$('promptNo').textContent='Handle det du husker.';$('memoryStart')?.remove();$('taskArea').querySelector('.grid')?.classList.remove('hidden')}
-function taskCategory(t){if(['memory','blackout'].includes(t.type))return 'Lytteforståelse';if(['offer','timed'].includes(t.type))return 'Tall og pris';if(t.type==='customers')return 'Leseforståelse';if(t.type==='product')return 'Ordforråd';if(t.type==='choice')return 'Situasjonsforståelse';return 'Varer og mengder'}
-function diagnoseTask(t){let notes=[];if(t.need){for(let [id,n] of Object.entries(t.need)){let got=sel[id]||0,p=findP(id);if(got<n)notes.push(`Du mangler ${n-got} × ${p.fr}.`);else if(got>n)notes.push(`Du har ${got-n} for mye av ${p.fr}.`)}for(let id of Object.keys(sel)){if((sel[id]||0)>0&&!t.need[id])notes.push(`${findP(id)?.fr||id} var ikke bestilt.`)}for(let id of (t.forbid||[])){if((sel[id]||0)>0)notes.push(`«pas de / sans» betyr at ${findP(id).fr} ikke skal velges.`)}}else if(t.answer!==undefined){notes.push(`Riktig svar er: ${t.answer}.`)}else if(t.type==='customers'){notes.push('Minst én vare er lagt i feil kundekurv. Se på navnene i bestillingen.')}return notes.join(' ')}
-function adaptiveHint(t,stage){if(stage===1){if(t.need){let selected=Object.values(sel).reduce((a,b)=>a+(Number(b)||0),0),required=Object.values(t.need).reduce((a,b)=>a+b,0);return selected<required?'Du mangler én eller flere varer. Se på bestillingen en gang til.':'Kontroller antall og om du har valgt en ekstra vare.'}return 'Les eller lytt til nøkkelordet én gang til.'}if(stage===2){let numberMatch=t.fr.match(/\b(deux|trois|quatre|cinq|six)\b/i);if(numberMatch)return `Se spesielt etter tallet «${numberMatch[1]}».`;if(/pas de|sans/i.test(t.fr))return 'Se etter uttrykket «pas de» eller «sans». Det forteller hva som ikke skal velges.';return 'Bruk 🔍 Forklar setningen og finn ordet som avgjør svaret.'}if(stage===3){if(t.need){let first=Object.entries(t.need).find(([id,n])=>(sel[id]||0)!==n);if(first){let [id,n]=first;return `Bestillingen krever ${n} × ${findP(id).fr}.`}}if(t.answer!==undefined)return `Svaret finnes i denne delen av setningen: «${t.fr}»`;return diagnoseTask(t)}return diagnoseTask(t)}
-function isTaskCorrect(t){if(['pick','timed','memory','blackout','boss'].includes(t.type))return Object.keys(t.need).every(k=>(sel[k]||0)===t.need[k])&&Object.keys(sel).every(k=>(sel[k]||0)===(t.need[k]||0))&&!(t.forbid||[]).some(k=>(sel[k]||0)>0);if(t.type==='customers'){let exp={};t.customers.forEach((c,i)=>Object.keys(c.need).forEach(id=>exp[id]=i));return Object.keys(exp).every(id=>sel.assign?.[id]===exp[id])}return sel.answer===t.answer}
-function snapshotAnswer(t){if(t.need){return Object.entries(sel).filter(([,n])=>Number(n)>0).map(([id,n])=>`${n} × ${findP(id)?.fr||id}`).join(', ')||'Ingen varer valgt'}if(t.type==='customers')return Object.entries(sel.assign||{}).map(([id,i])=>`${findP(id)?.fr||id} → ${t.customers[i]?.n||'ukjent'}`).join(', ')||'Ingen fordeling';return sel.answer??'Ikke svart'}
-function correctAnswerText(t){if(t.need)return Object.entries(t.need).map(([id,n])=>`${n} × ${findP(id)?.fr||id}`).join(', ');if(t.type==='customers')return t.customers.map(c=>`${c.n}: ${Object.entries(c.need).map(([id,n])=>`${n} × ${findP(id)?.fr||id}`).join(', ')}`).join(' | ');return String(t.answer??'')}
-function updateVocabStats(t,correct){let ids=new Set([...Object.keys(t.need||{}),...(t.forbid||[])]);if(t.answer&&findP(t.answer))ids.add(t.answer);let hadDifficulty=currentMistakes>0||!correct;ids.forEach(id=>{vocabStats[id]??={seen:0,errors:0};vocabStats[id].seen++;if(hadDifficulty)vocabStats[id].errors++})}
-function recordResult(t,correct,points){let selectedAnswer=snapshotAnswer(t),correctAnswer=correctAnswerText(t);updateVocabStats(t,correct);taskResults.push({level:t.l,title:t.title,category:taskCategory(t),correct,firstTry:correct&&currentMistakes===0,mistakes:currentMistakes,points,selectedAnswer,correctAnswer})}
-function checkTask(){if(locked)return;clearInterval(timer);timer=null;attempts++;let t=campaign[idx],ok=isTaskCorrect(t);if(!ok&&currentMistakes<3){currentMistakes++;$('feedback').innerHTML=`<span class="hintLevel">Hint ${currentMistakes} av 3</span><br>💡 ${adaptiveHint(t,currentMistakes)} Prøv igjen.`;$('feedback').style.color='#8a5a00';return}locked=true;let base=t.maxPoints||100,pts=ok?Math.max(40,base-currentMistakes*20):(gameMode==='training'?15:0);if(gameMode==='competition'&&!ok)score=Math.max(0,score-20);else score+=pts;if(ok)stars++;recordResult(t,ok,pts);$('feedback').textContent=ok?`✅ Très bien! +${pts} poeng${currentMistakes?` etter ${currentMistakes} hint`: ' på første forsøk'}`:`💡 ${diagnoseTask(t)} ${gameMode==='competition'?'−20 poeng.':'Fasit vises nå.'}`;$('feedback').style.color=ok?'#207a49':'#b33434';if(!ok)revealAnswer();$('checkBtn').classList.add('hidden');$('nextBtn').classList.remove('hidden');updateStats()}
-function revealAnswer(){let t=campaign[idx];if(t.need)Object.keys(t.need).forEach(id=>document.querySelector(`[data-id="${id}"]`)?.classList.add('correct'));if(t.answer)document.querySelectorAll('.option').forEach(b=>{if(b.dataset.value===t.answer)b.classList.add('correct');else if(b.classList.contains('chosen'))b.classList.add('wrong')});if(t.type==='customers'){t.customers.forEach((c,i)=>{$('basket-'+i).innerHTML=Object.entries(c.need).map(([id,n])=>`${n} × ${findP(id).e} ${findP(id).fr}`).join('<br>')});$('feedback').textContent='Fasit er vist i kundekurvene.'}}function nextTask(){idx++;idx>=campaign.length?finishRun():render()}function skipTask(){clearInterval(timer);timer=null;let t=campaign[idx];currentMistakes=Math.max(currentMistakes,1);updateVocabStats(t,false);taskResults.push({level:t.l,title:t.title,category:taskCategory(t),correct:false,firstTry:false,mistakes:currentMistakes,points:0,selectedAnswer:'Hoppet over',correctAnswer:correctAnswerText(t),skipped:true});nextTask()}
-function finishRun(){screen('finish');$('bar').style.width='100%';$('certName').textContent=$('studentName').value.trim()||'________________';let max=campaign.reduce((s,t)=>s+(t.maxPoints||100),0),pct=score/max,currentLevel=campaign.length&&campaign.every(t=>t.l===campaign[0].l)?campaign[0].l:null;if(currentLevel&&pct>=.5&&!completedLevels.includes(currentLevel))completedLevels.push(currentLevel);if(!currentLevel&&pct>=.5)completedLevels=L.map(level=>level.id);bestScore=Math.max(bestScore,score);saveProgress();$('finalScore').textContent=`${score} av ${max} poeng og ${stars} stjerner`;$('rank').textContent=pct>=.9?'👑 Maître du Petit Marché':pct>=.7?'⭐⭐ Expert du marché':pct>=.5?'⭐ Bon acheteur':'🛒 Apprenti du marché';$('summary').textContent=`Du fullførte ${campaign.length} oppdrag i ${gameMode==='training'?'treningsmodus':'konkurransemodus'}. ${currentLevel&&pct>=.5?'Neste nivå er låst opp.':''}`;$('date').textContent=new Date().toLocaleDateString('no-NO');renderLearningReport()}
-function renderLearningReport(){let total=taskResults.length,correct=taskResults.filter(r=>r.correct).length,first=taskResults.filter(r=>r.firstTry).length,cats={};taskResults.forEach(r=>{cats[r.category]??={total:0,correct:0,mistakes:0};cats[r.category].total++;cats[r.category].correct+=r.correct?1:0;cats[r.category].mistakes+=r.mistakes});let scored=Object.entries(cats).map(([name,v])=>({name,...v,accuracy:v.correct/v.total,confidence:(v.correct+1)/(v.total+2),score:((v.correct+1)/(v.total+2))*Math.log2(v.total+1)}));let strong=[...scored].sort((a,b)=>b.score-a.score).slice(0,2),practice=[...scored].sort((a,b)=>(a.accuracy-b.accuracy)||(b.total-a.total)).slice(0,2);let rows=taskResults.map(r=>`<tr><td>${r.level}</td><td>${r.title}</td><td>${r.category}</td><td>${r.selectedAnswer}</td><td>${r.correctAnswer}</td><td>${r.skipped?'<span class="skipped">Hoppet over</span>':(r.correct?'✅':'⚠️')}</td><td>${r.mistakes}</td></tr>`).join('');let vocab=Object.entries(vocabStats).map(([id,v])=>({p:findP(id),...v})).filter(x=>x.p),strongWords=[...vocab].sort((a,b)=>(b.seen-b.errors)-(a.seen-a.errors)).filter(x=>x.seen>=2&&x.errors===0).slice(0,5),practiceWords=[...vocab].sort((a,b)=>(b.errors/b.seen)-(a.errors/a.seen)||b.errors-a.errors).filter(x=>x.errors>0).slice(0,5);$('learningReport').innerHTML=`<h2 style="text-align:center;color:#173b63">📊 Elev- og lærerrapport</h2><div class="reportGrid"><div class="reportCard"><h3>Elevoversikt</h3><b>${correct} av ${total}</b> oppgaver løst<br><b>${first}</b> riktig på første forsøk<br><b>${taskResults.reduce((sum,r)=>sum+r.mistakes,0)}</b> hint brukt</div><div class="reportCard"><h3>Styrker</h3><ul class="reportList">${strong.map(x=>`<li>${x.name}: ${x.correct}/${x.total}</li>`).join('')||'<li>Ingen data</li>'}</ul></div><div class="reportCard"><h3>Anbefalt øving</h3><ul class="reportList">${practice.map(x=>`<li>${x.name}: ${x.correct}/${x.total}</li>`).join('')||'<li>Ingen data</li>'}</ul></div><div class="reportCard"><h3>Sikre gloser</h3><ul class="reportList">${strongWords.map(x=>`<li>${x.p.fr} – ${x.p.no}</li>`).join('')||'<li>Spill flere oppgaver</li>'}</ul></div><div class="reportCard"><h3>Gloser å øve på</h3><ul class="reportList">${practiceWords.map(x=>`<li>${x.p.fr} – ${x.p.no} (${x.errors} feil)</li>`).join('')||'<li>Ingen registrerte glosefeil</li>'}</ul></div></div><h3>Detaljert lærerrapport</h3><div style="overflow:auto"><table class="reportTable"><thead><tr><th>Nivå</th><th>Oppgave</th><th>Område</th><th>Elevsvar</th><th>Fasit</th><th>Resultat</th><th>Hint</th></tr></thead><tbody>${rows}</tbody></table></div>`}
-function csvValue(value){let text=String(value??'');return `"${text.replaceAll('"','""')}"`}function downloadReport(){let name=$('studentName').value.trim()||'Elev',header=['Elev','Nivå','Oppgave','Område','Elevsvar','Fasit','Riktig','Første forsøk','Hint','Poeng'],rows=taskResults.map(r=>[name,r.level,r.title,r.category,r.selectedAnswer,r.correctAnswer,r.correct?'Ja':'Nei',r.firstTry?'Ja':'Nei',r.mistakes,r.points]),lines=[header,...rows].map(row=>row.map(csvValue).join(';')),blob=new Blob(['\ufeff'+lines.join('\n')],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`laererrapport_${name.replace(/\s+/g,'_')}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-function speakCurrent(rate=.9){let t=campaign[idx];if(gameMode==='competition'&&audioPlays>=2){$('feedback').textContent='Du har brukt de to tillatte avspillingene.';return}if(!('speechSynthesis'in window)){alert('Tale er ikke tilgjengelig.');return}audioPlays++;speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t.fr);u.lang='fr-FR';u.rate=rate;let v=speechSynthesis.getVoices().find(x=>x.lang?.toLowerCase().startsWith('fr'));if(v)u.voice=v;speechSynthesis.speak(u)}function toggleBoard(){document.body.classList.toggle('board')}function toggleTeacher(){teacher=!teacher;$('teacherPanel').classList.toggle('show',teacher);buildLevels()}function escapeRegex(value){return value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
-function containsPhrase(text,phrase){let escaped=escapeRegex(phrase),left=/^[A-Za-zÀ-ÿŒœ]/.test(phrase)?'(?<![A-Za-zÀ-ÿŒœ])':'',right=/[A-Za-zÀ-ÿŒœ]$/.test(phrase)?'(?![A-Za-zÀ-ÿŒœ])':'';return new RegExp(left+escaped+right,'iu').test(text)}
-function grammarParts(text){const dict={"je n'aime pas":'jeg liker ikke','je voudrais':'jeg vil gjerne ha',"j'aime":'jeg liker','il faut':'man trenger','pas de':'ikke noe','deux':'to','trois':'tre','quatre':'fire','cinq':'fem','six':'seks','combien':'hvor mye / hvor mange','coûtent':'koster','mais':'men','sans':'uten','et':'og'};let parts=[],used=new Set;Object.entries(dict).sort((a,b)=>b[0].length-a[0].length).forEach(([fr,no])=>{if(containsPhrase(text.toLowerCase(),fr)&&![...used].some(x=>x.includes(fr)||fr.includes(x))){parts.push([fr,no]);used.add(fr)}});P.forEach(p=>{let bare=p.fr.replace(/^(un|une|du|des|de l')\s*/i,'');if(containsPhrase(text.toLowerCase(),bare.toLowerCase())&&!used.has(bare.toLowerCase())){parts.push([bare,p.no]);used.add(bare.toLowerCase())}});return parts.length?parts:[[text,'Les hele setningen og finn nøkkelord, tall og nektelse.']]}
-function explainCurrentSentence(){let t=campaign[idx];if((t.type==='memory'||t.type==='blackout')&&!locked){$('feedback').textContent='Grammatikkforklaringen blir tilgjengelig etter at oppgaven er kontrollert.';return}let g=$('grammar'),parts=grammarParts(t.fr);g.innerHTML=`<div class="grammarTitle">🔍 Slik er setningen bygget opp</div><div class="grammarParts">${parts.map(([fr,no])=>`<div class="grammarPart"><b>${fr}</b><small>${no}</small></div>`).join('')}</div><div class="small" style="margin-top:8px">Hel setning: ${t.fr}</div>`;g.classList.remove('hidden')}
-function toggleGrammar(){let g=$('grammar');if(g.classList.contains('hidden'))explainCurrentSentence();else g.classList.add('hidden')}function toggleBlackout(){document.body.classList.toggle('blackout')}loadProgress();buildLevels();
-</script></body></html>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bistro-bg);
+    background-image: 
+      radial-gradient(circle at 100% 0%, rgba(217, 119, 6, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 0% 100%, rgba(153, 27, 27, 0.04) 0%, transparent 40%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* --- CHIC PARISIAN AWNING STRIPE --- */
+  .awning {
+    height: 14px;
+    width: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      #991b1b,
+      #991b1b 16px,
+      #fdfbf7 16px,
+      #fdfbf7 32px
+    );
+    box-shadow: 0 2px 8px rgba(153, 27, 27, 0.2);
+    position: relative;
+    z-index: 20;
+  }
+
+  /* --- MODERN UNIFIED TOPBAR --- */
+  .topbar {
+    background: var(--bistro-navy);
+    border-bottom: 2px solid rgba(217, 119, 6, 0.3);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+  }
+  .brand:hover { transform: scale(1.02); }
+  .brand-logo {
+    font-size: 1.6rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+  .brand-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+  .brand-badge {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .topbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pill-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #e2e8f0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  .pill-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+  .pill-btn.active {
+    background: #d97706;
+    border-color: #f59e0b;
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(217, 119, 6, 0.4);
+  }
+  .pill-btn.teacher-active {
+    background: #2563eb;
+    border-color: #60a5fa;
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(37, 99, 235, 0.45);
+  }
+
+  /* --- APP CONTAINER --- */
+  .main-wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    flex: 1;
+    width: 100%;
+  }
+
+  /* Screen visibility */
+  .screen { display: none; animation: fadeIn 0.25s ease-out; }
+  .screen.active { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- HERO HEADER --- */
+  .hero-box {
+    text-align: center;
+    padding: 28px 20px 24px;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+    border: 1px solid var(--border-card);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #991b1b, #d97706, #15803d);
+  }
+  .hero-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--bistro-wood);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* --- TEACHER SHOWCASE CARD --- */
+  .teacher-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+  .teacher-card::after {
+    content: '👨‍🏫';
+    position: absolute;
+    right: 20px;
+    bottom: -15px;
+    font-size: 6rem;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .teacher-card-badge {
+    display: inline-block;
+    background: rgba(217, 119, 6, 0.25);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #fde68a;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .teacher-card h3 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+    color: #fef3c7;
+  }
+  .teacher-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    margin-bottom: 16px;
+    max-width: 820px;
+  }
+
+  /* --- SECTION TITLE --- */
+  .section-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bistro-navy);
+    margin: 28px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(15, 23, 42, 0.12);
+  }
+
+  /* --- MODE GRID --- */
+  .mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mode-card {
+    background: var(--bistro-card);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .mode-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(153, 27, 27, 0.25);
+  }
+  .mode-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .mode-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .badge-hot { background: #fee2e2; color: #991b1b; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  .badge-amber { background: #fef3c7; color: #b45309; }
+
+  .mode-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--bistro-navy);
+    margin-bottom: 6px;
+  }
+  .mode-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+
+  .btn-start {
+    background: var(--bistro-navy);
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .btn-start:hover {
+    background: #1e293b;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+    transform: translateY(-1px);
+  }
+  .btn-start.wine {
+    background: var(--bistro-wine);
+  }
+  .btn-start.wine:hover {
+    background: var(--bistro-wine-hover);
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.35);
+  }
+  .btn-start.amber {
+    background: #d97706;
+  }
+  .btn-start.amber:hover {
+    background: #b45309;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+  }
+
+  /* --- LEADERBOARD CARD --- */
+  .leaderboard-card {
+    background: var(--bistro-card);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 10px;
+  }
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .leaderboard-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f8fafc;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .leaderboard-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .leaderboard-table tr:hover td {
+    background: #fafaf9;
+  }
+
+  /* --- GAME HUD --- */
+  .hud-bar {
+    background: var(--bistro-navy);
+    border-radius: 14px;
+    padding: 12px 20px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-md);
+  }
+  .hud-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hud-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+  }
+  .hud-val {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  .hud-val.gold { color: #f59e0b; }
+  .hud-val.green { color: #4ade80; }
+
+  /* --- CUSTOMER CARD --- */
+  .customer-card {
+    background: var(--bistro-card);
+    border: 1px solid var(--border-card);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .customer-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+  .cust-avatar {
+    font-size: 2.8rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+  }
+  .cust-info { flex: 1; }
+  .cust-name {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--bistro-wood);
+  }
+  .cust-tag {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .order-bubble {
+    background: #fffbeb;
+    border: 2px solid #fde68a;
+    border-radius: 14px;
+    padding: 16px 20px;
+    position: relative;
+    margin-bottom: 14px;
+  }
+  .order-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: #78350f;
+    line-height: 1.45;
+  }
+
+  .audio-controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .btn-audio {
+    background: #ffffff;
+    border: 1px solid #f59e0b;
+    color: #b45309;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  .btn-audio:hover {
+    background: #fef3c7;
+    transform: translateY(-1px);
+  }
+
+  /* Timer bar */
+  .timer-wrap {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+  .timer-bar {
+    height: 100%;
+    width: 100%;
+    background: #15803d;
+    transition: width 0.25s linear, background-color 0.3s;
+  }
+  .calm-badge {
+    display: none;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-top: 10px;
+  }
+
+  /* Teacher Toolbar */
+  .teacher-toolbar {
+    display: none;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  body.whiteboard-active .teacher-toolbar { display: flex; }
+
+  .teacher-btn-group {
+    display: flex;
+    gap: 6px;
+  }
+  .btn-teach-pill {
+    background: #ffffff;
+    border: 1px solid #93c5fd;
+    color: #1e40af;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-teach-pill.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #1d4ed8;
+  }
+
+  /* Grammar breakdown */
+  .grammar-box {
+    display: none;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    animation: fadeIn 0.2s;
+  }
+  .grammar-box.show { display: block; }
+  .grammar-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .g-chip {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .g-chip.masc { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+  .g-chip.fem { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+  .g-chip.plural { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+  .g-chip.neg { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+  /* --- COUNTER & TRAY WORKSPACE --- */
+  .workspace {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 860px) {
+    .workspace { grid-template-columns: 1fr; }
+  }
+
+  .counter-col, .tray-col {
+    background: var(--bistro-card);
+    border: 1px solid var(--border-card);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bistro-wood);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Items Grid */
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+  .items-grid.hide-labels .food-name,
+  .items-grid.hide-labels .food-price {
+    display: none;
+  }
+  .items-grid.hide-labels {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .food-btn {
+    background: #fdfbf7;
+    border: 1.5px solid #e7e2d7;
+    border-radius: 12px;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.16s ease;
+    user-select: none;
+  }
+  .food-btn:hover {
+    transform: translateY(-2px);
+    border-color: #d97706;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(217, 119, 6, 0.15);
+  }
+  .food-btn:active {
+    transform: translateY(0);
+  }
+  .food-emoji { font-size: 2.1rem; line-height: 1.1; }
+  .food-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--bistro-navy);
+    text-align: center;
+    line-height: 1.2;
+  }
+  .food-price {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #d97706;
+    background: #fef3c7;
+    padding: 2px 7px;
+    border-radius: 999px;
+  }
+
+  /* Tray Surface */
+  .tray-surface {
+    background: repeating-linear-gradient(
+      0deg,
+      #f8fafc,
+      #f8fafc 24px,
+      #f1f5f9 24px,
+      #f1f5f9 48px
+    );
+    border: 2px dashed #cbd5e1;
+    border-radius: 14px;
+    padding: 16px;
+    min-height: 180px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .tray-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-style: italic;
+    padding: 30px 10px;
+  }
+
+  .tray-pill {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    border-radius: 999px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+    animation: popIn 0.15s ease-out;
+  }
+  .tray-pill:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    transform: translateY(-1px);
+  }
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .tray-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .btn-serve {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+    color: #ffffff;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(21, 128, 61, 0.3);
+    transition: all 0.2s;
+  }
+  .btn-serve:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(21, 128, 61, 0.4);
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  }
+  .btn-clear {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-clear:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+  }
+
+  /* --- FEEDBACK BANNER --- */
+  .feedback-banner {
+    display: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    animation: fadeIn 0.2s;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .feedback-banner.show { display: flex; }
+  .feedback-banner.success {
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    color: #14532d;
+  }
+  .feedback-banner.error {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #7f1d1d;
+  }
+  .btn-next-customer {
+    background: #15803d;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.88rem;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(21, 128, 61, 0.3);
+  }
+  .btn-next-customer:hover {
+    background: #166534;
+  }
+
+  /* --- MODAL WINDOWS --- */
+  .modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-backdrop.show { display: flex; }
+  .modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 520px;
+    padding: 26px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalPop 0.2s ease-out;
+  }
+  @keyframes modalPop {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Receipt box (La Caisse) */
+  .receipt-box {
+    background: #fafaf9;
+    border: 1px solid #e7e5e4;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 14px 0 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+  }
+  .receipt-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dashed #e7e5e4;
+  }
+  .caisse-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .caisse-btn {
+    background: #f8fafc;
+    border: 2px solid #cbd5e1;
+    color: var(--bistro-navy);
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.18s;
+    text-align: center;
+  }
+  .caisse-btn:hover {
+    background: #fef3c7;
+    border-color: #d97706;
+    color: #78350f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(217, 119, 6, 0.15);
+  }
+
+  /* Glossary Modal */
+  .glossary-section-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--bistro-wood);
+    margin: 18px 0 10px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 4px;
+  }
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .glossary-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .glossary-item:hover {
+    background: #fef3c7;
+    border-color: #f59e0b;
+  }
+
+  /* --- END SCREEN DIPLOMA --- */
+  .diploma-card {
+    background: #ffffff;
+    border: 3px double #d97706;
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .diploma-header {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 2rem;
+    color: var(--bistro-wood);
+    margin-bottom: 6px;
+  }
+  .diploma-rank {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #991b1b;
+    margin: 12px 0 20px;
+    padding: 8px 20px;
+    background: #fee2e2;
+    border-radius: 999px;
+    display: inline-block;
+  }
+  .diploma-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .stat-tile {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .stat-tile .num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--bistro-navy);
+  }
+
+  .save-score-bar {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .save-score-bar input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+  .verify-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<!-- CHIC AWNING -->
+<div class="awning"></div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="brand" onclick="showMenu()">
+    <span class="brand-logo">☕</span>
+    <span class="brand-title">Café Panique !</span>
+    <span class="brand-badge">Paris 🇫🇷</span>
+  </div>
+
+  <div class="topbar-controls">
+    <button class="pill-btn" id="btnWhiteboard" onclick="toggleWhiteboardMode()">👨‍🏫 Tavlemodus: AV</button>
+    <button class="pill-btn" id="btnCalm" onclick="toggleCalmMode()">🧘 Rolig modus: AV</button>
+    <button class="pill-btn active" id="btnLabels" onclick="toggleLabels()">🏷️ Merkelapper: PÅ</button>
+    <button class="pill-btn" onclick="openGlossary()">📖 Glosebok</button>
+    <button class="pill-btn active" id="btnSound" onclick="toggleSound()">🔊 Lyd: PÅ</button>
+    <button class="pill-btn" onclick="showMenu()">🏠 Meny</button>
+  </div>
+</header>
+
+<main class="main-wrap">
+
+  <!-- ================= SCREEN 1: MENU ================= -->
+  <section class="screen active" id="screenMenu">
+    
+    <div class="hero-box">
+      <h1 class="hero-title">Bienvenue au Café Panique ! 🥐☕</h1>
+      <p class="hero-subtitle">
+        Jobb bak disken på en travel kafé i Paris! Les eller lytt til kundens bestilling på fransk,
+        legg riktige varer på brettet og ta betalt i kassen.
+      </p>
+    </div>
+
+    <!-- TEACHER SHOWCASE BANNER -->
+    <div class="teacher-card">
+      <span class="teacher-card-badge">Storskjerm · Undervisning i klasserommet</span>
+      <h3>👨‍🏫 Tavlemodus for felles gjennomgang</h3>
+      <p>
+        Skal du gjennomgå franske bestillinger, tall eller nektelse (<em>pas de / sans</em>) felles på tavla?
+        I Tavlemodus er <strong>alt tidspress skrudd av</strong>, teksten er ekstra stor, og du får et eget 
+        <strong>lærerpanel med språkanalyse</strong> og raskt nivåbytte.
+      </p>
+      <button class="btn-start amber" style="max-width: 320px;" onclick="startWhiteboardSession()">
+        Start Tavlemodus på storskjerm ➔
+      </button>
+    </div>
+
+    <!-- COMPETITION MODES -->
+    <h2 class="section-title">🏆 Konkurransemoduser (med poengbevis & toppliste)</h2>
+    <div class="mode-grid">
+      <div class="mode-card">
+        <div class="mode-header">
+          <span class="mode-badge badge-hot">🔥 Mest populær</span>
+          <span style="font-size: 1.4rem;">🥐</span>
+        </div>
+        <h3>Rushtid i Paris</h3>
+        <p class="mode-desc">
+          Du har <strong>3 liv (❤️❤️❤️)</strong>. For hver kunde krymper tiden, og bestillingene blir vanskeligere.
+          (Tips: Klikk <em>🧘 Rolig modus</em> øverst hvis du vil fjerne tidspresset!)
+        </p>
+        <button class="btn-start wine" onclick="startGame('rush')">Start Rushtid ➔</button>
+      </div>
+
+      <div class="mode-card">
+        <div class="mode-header">
+          <span class="mode-badge badge-amber">⚡ Fellesstart i klassen</span>
+          <span style="font-size: 1.4rem;">⏱️</span>
+        </div>
+        <h3>2-Minutters Klasseduell</h3>
+        <p class="mode-desc">
+          Alle har nøyaktig <strong>120 sekunder</strong>! Ekspeder så mange kunder og tjen så mange poeng du klarer før klokka ringer.
+        </p>
+        <button class="btn-start" onclick="startGame('sprint')">Start 2-Min Duell ➔</button>
+      </div>
+    </div>
+
+    <!-- TRAINING LEVELS -->
+    <h2 class="section-title">📚 Trinnvis Trening & Grammatikk</h2>
+    <div class="mode-grid">
+      <div class="mode-card">
+        <div class="mode-header">
+          <span class="mode-badge badge-blue">Trinn 1</span>
+          <span style="font-size: 1.4rem;">🥐</span>
+        </div>
+        <h3>Nivå 1: Hankjønn & Hunkjønn</h3>
+        <p class="mode-desc">
+          Lær forskjellen på <em>un</em> (hankjønn) og <em>une</em> (hunkjønn). 1–2 enkle varer per kunde.
+        </p>
+        <button class="btn-start" onclick="startGame('lvl1')">Start Nivå 1 ➔</button>
+      </div>
+
+      <div class="mode-card">
+        <div class="mode-header">
+          <span class="mode-badge badge-blue">Trinn 2</span>
+          <span style="font-size: 1.4rem;">🔢</span>
+        </div>
+        <h3>Nivå 2: Flertall & Franske Tall</h3>
+        <p class="mode-desc">
+          Bestillinger med <em>deux</em>, <em>trois</em> og flertallsform av substantiv.
+        </p>
+        <button class="btn-start" onclick="startGame('lvl2')">Start Nivå 2 ➔</button>
+      </div>
+
+      <div class="mode-card">
+        <div class="mode-header">
+          <span class="mode-badge badge-blue">Trinn 3</span>
+          <span style="font-size: 1.4rem;">🚫</span>
+        </div>
+        <h3>Nivå 3: Nektelse (« Pas de »)</h3>
+        <p class="mode-desc">
+          Pass på fellene! Kunden sier <em>« mais pas de croissant »</em> eller <em>« et sans pomme »</em>.
+        </p>
+        <button class="btn-start" onclick="startGame('lvl3')">Start Nivå 3 ➔</button>
+      </div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <h2 class="section-title">🏅 Elevenes Toppliste på denne enheten</h2>
+    <div class="leaderboard-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <span style="font-weight: 700; color: var(--text-muted); font-size: 0.9rem;">Topp 15 servitører</span>
+        <button class="btn-clear" id="btnClearScores" style="padding: 6px 12px; font-size: 0.8rem;" onclick="clearLeaderboard()">
+          Nullstill liste
+        </button>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Plass</th>
+              <th>Navn</th>
+              <th>Modus</th>
+              <th>Poeng</th>
+              <th>Kunder</th>
+              <th>Rang</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- OFFLINE DOWNLOAD -->
+    <div style="margin-top: 24px; text-align: center;">
+      <button class="pill-btn" style="background:#ffffff; color:#0f172a; border-color:#cbd5e1; padding: 10px 18px;" onclick="downloadHtmlFile()">
+        💾 Last ned som offline HTML-fil til PC / minnepenn
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ================= SCREEN 2: GAMEPLAY ================= -->
+  <section class="screen" id="screenGame">
+
+    <!-- HUD -->
+    <div class="hud-bar">
+      <div class="hud-item">
+        <span class="hud-label" id="hudModeLabel">Liv igjen</span>
+        <span class="hud-val" id="hudLives">❤️❤️❤️</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Poengsum</span>
+        <span class="hud-val gold" id="hudScore">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Kassen (inkl. tips)</span>
+        <span class="hud-val green" id="hudEuros">0 €</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Kunder</span>
+        <span class="hud-val" id="hudCustomers">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Streak</span>
+        <span class="hud-val" id="hudStreak">🔥 x1</span>
+      </div>
+    </div>
+
+    <!-- FEEDBACK BANNER -->
+    <div class="feedback-banner" id="feedbackBanner"></div>
+
+    <!-- CUSTOMER CARD -->
+    <div class="customer-card">
+      <div class="customer-top">
+        <div class="cust-avatar" id="custEmoji">👩‍🎨</div>
+        <div class="cust-info">
+          <div class="cust-name" id="custName">Camille</div>
+          <div class="cust-tag">Kunde ved disken</div>
+        </div>
+      </div>
+
+      <div class="order-bubble">
+        <div class="order-quote" id="orderText">« Bonjour ! Je voudrais deux croissants et un café, s'il vous plaît. »</div>
+        <div class="audio-controls">
+          <button class="btn-audio" onclick="speakOrder(0.92)">🔊 Lytt (normal fransk)</button>
+          <button class="btn-audio" onclick="speakOrder(0.72)">🐢 Lytt (langsomt)</button>
+        </div>
+      </div>
+
+      <div class="timer-wrap" id="timerWrap">
+        <div class="timer-bar" id="timerBar"></div>
+      </div>
+      <div class="calm-badge" id="calmStatusBadge">🧘 Rolig modus aktiv – Ingen tidsfrist</div>
+    </div>
+
+    <!-- TEACHER TOOLBAR (Whiteboard mode) -->
+    <div class="teacher-toolbar" id="teacherToolbar">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="font-weight:800; font-size:0.85rem; color:#1e3a8a;">👨‍🏫 Hurtigvalg for læreren:</span>
+        <div class="teacher-btn-group">
+          <button class="btn-teach-pill" id="btnTeachLvl1" onclick="switchTeacherLevel('lvl1')">Nivå 1</button>
+          <button class="btn-teach-pill" id="btnTeachLvl2" onclick="switchTeacherLevel('lvl2')">Nivå 2</button>
+          <button class="btn-teach-pill" id="btnTeachLvl3" onclick="switchTeacherLevel('lvl3')">Nivå 3</button>
+        </div>
+      </div>
+      <button class="btn-teach-pill" id="btnToggleBreakdown" onclick="toggleBreakdown()">
+        🔍 Vis språkhjelp / struktur
+      </button>
+    </div>
+
+    <!-- GRAMMAR BREAKDOWN -->
+    <div class="grammar-box" id="grammarBreakdown"></div>
+
+    <!-- WORKSPACE: DISK & BRETT -->
+    <div class="workspace">
+      
+      <!-- LEFT: BISTRO DISK -->
+      <div class="counter-col">
+        <div class="col-title">
+          <span>🥐 Bistrodisken (Meny)</span>
+          <span style="font-size:0.8rem; color:var(--text-muted); font-family:sans-serif; font-weight:600;">Klikk for å legge på brettet</span>
+        </div>
+        <div class="items-grid" id="itemsGrid"></div>
+      </div>
+
+      <!-- RIGHT: TRAY / PLATEAU -->
+      <div class="tray-col">
+        <div class="col-title">
+          <span>🍽️ Serveringsbrettet</span>
+          <span class="hud-label" id="trayCount" style="color:var(--bistro-wine);">0 varer</span>
+        </div>
+        <div class="tray-surface" id="traySurface"></div>
+        <div class="tray-actions">
+          <button class="btn-clear" onclick="clearTray()">🧹 Tøm</button>
+          <button class="btn-serve" onclick="checkTrayAndOpenCaisse()">
+            🛎️ Send til kassen ➔
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= SCREEN 3: END DIPLOMA ================= -->
+  <section class="screen" id="screenEnd">
+    <div class="diploma-card">
+      <div style="font-size: 3rem; margin-bottom: 8px;">🎓</div>
+      <h2 class="diploma-header">Diplôme du Café Panique</h2>
+      <p id="endReasonText" style="color: #64748b; font-weight: 600; margin-bottom: 12px;">Fin du service ! Slik gikk skiftet ditt:</p>
+      <div class="diploma-rank" id="endRankBadge">Serveur de Bistro</div>
+
+      <div class="diploma-stats">
+        <div class="stat-tile">
+          <div class="hud-label">Total Poengsum</div>
+          <div class="num" id="endScore">0</div>
+        </div>
+        <div class="stat-tile">
+          <div class="hud-label">Inntjent (inkl. tips)</div>
+          <div class="num" id="endEuros">0 €</div>
+        </div>
+        <div class="stat-tile">
+          <div class="hud-label">Kunder ekspedert</div>
+          <div class="num" id="endCustomers">0</div>
+        </div>
+        <div class="stat-tile">
+          <div class="hud-label">Beste Streak</div>
+          <div class="num" id="endBestStreak">0</div>
+        </div>
+      </div>
+
+      <div class="save-score-bar" id="saveScoreBox">
+        <input type="text" id="playerNameInput" placeholder="Skriv navnet ditt..." maxlength="20">
+        <button class="btn-serve" style="flex:0; white-space: nowrap;" onclick="saveScore()">💾 Lagre på topplista</button>
+      </div>
+
+      <div>
+        <span class="verify-code" id="verifyCode">BEVIS-KODE: CP-0000</span>
+      </div>
+
+      <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn-serve" style="max-width: 220px;" onclick="restartSameMode()">🔄 Spill igjen</button>
+        <button class="btn-clear" onclick="showMenu()">🏠 Til hovedmeny</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CASH REGISTER MODAL ("LA CAISSE") -->
+<div class="modal-backdrop" id="caisseModal">
+  <div class="modal-card">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
+      <h2 style="font-family: 'Cinzel', Georgia, serif; color: var(--bistro-wood); font-size:1.35rem;">💶 La Caisse (Kassaapparat)</h2>
+      <button class="btn-audio" onclick="speakFrench('Ça fait combien, s\'il vous plaît ?', 0.9)">🔊 Uttale</button>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px;">
+      Kunden spør høflig: <em>« Ça fait combien, s'il vous plaît ? »</em><br>
+      Regn sammen totalen i euro og velg riktig svar:
+    </p>
+
+    <div class="receipt-box" id="receiptBox"></div>
+
+    <div class="caisse-grid" id="caisseOptions"></div>
+  </div>
+</div>
+
+<!-- GLOSSARY MODAL ("GLOSEBOK") -->
+<div class="modal-backdrop" id="glossaryModal">
+  <div class="modal-card" style="max-width: 720px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <h2 style="font-family: 'Cinzel', Georgia, serif; color: var(--bistro-wood); font-size:1.35rem;">📖 Glosebok (Klikk for fransk uttale)</h2>
+      <button class="btn-clear" onclick="closeGlossary()">✕ Lukk</button>
+    </div>
+
+    <div class="glossary-section-title">🥐 Mat og Drikke</div>
+    <div class="glossary-grid" id="glossaryFood"></div>
+
+    <div class="glossary-section-title">💬 Nyttige Fraser</div>
+    <div class="glossary-grid" id="glossaryPhrases"></div>
+
+    <div class="glossary-section-title">🔢 Franske Tall 1–30</div>
+    <div class="glossary-grid" id="glossaryNumbers"></div>
+  </div>
+</div>
+
+<script>
+  // --- DATA: MENU ITEMS ---
+  const MENU_ITEMS = [
+    { id: 'croissant', gender: 'm', fr: 'un croissant', plural: 'croissants', neg: 'de croissant', no: 'en croissant', price: 2, emoji: '🥐' },
+    { id: 'baguette', gender: 'f', fr: 'une baguette', plural: 'baguettes', neg: 'de baguette', no: 'en bagett', price: 3, emoji: '🥖' },
+    { id: 'cafe', gender: 'm', fr: 'un café', plural: 'cafés', neg: 'de café', no: 'en kaffe', price: 2, emoji: '☕' },
+    { id: 'chocolat', gender: 'm', fr: 'un chocolat chaud', plural: 'chocolats chauds', neg: 'de chocolat chaud', no: 'en varm sjokolade', price: 4, emoji: '🍫' },
+    { id: 'jus', gender: 'm', fr: "un jus d'orange", plural: "jus d'orange", neg: "de jus d'orange", no: 'en appelsinjuice', price: 3, emoji: '🧃' },
+    { id: 'crepe', gender: 'f', fr: 'une crêpe', plural: 'crêpes', neg: 'de crêpe', no: 'en pannekake', price: 4, emoji: '🥞' },
+    { id: 'sandwich', gender: 'm', fr: 'un sandwich', plural: 'sandwichs', neg: 'de sandwich', no: 'en sandwich', price: 5, emoji: '🥪' },
+    { id: 'pomme', gender: 'f', fr: 'une pomme', plural: 'pommes', neg: 'de pomme', no: 'et eple', price: 1, emoji: '🍎' },
+    { id: 'glace', gender: 'f', fr: 'une glace', plural: 'glaces', neg: 'de glace', no: 'en iskrem', price: 3, emoji: '🍨' },
+    { id: 'eau', gender: 'f', fr: 'une eau minérale', plural: 'eaux minérales', neg: "d'eau minérale", no: 'en flaske vann', price: 2, emoji: '💧' }
+  ];
+
+  const FRENCH_NUMBERS = {
+    1: 'un', 2: 'deux', 3: 'trois', 4: 'quatre', 5: 'cinq',
+    6: 'six', 7: 'sept', 8: 'huit', 9: 'neuf', 10: 'dix',
+    11: 'onze', 12: 'douze', 13: 'treize', 14: 'quatorze', 15: 'quinze',
+    16: 'seize', 17: 'dix-sept', 18: 'dix-huit', 19: 'dix-neuf', 20: 'vingt',
+    21: 'vingt et un', 22: 'vingt-deux', 23: 'vingt-trois', 24: 'vingt-quatre', 25: 'vingt-cinq',
+    26: 'vingt-six', 27: 'vingt-sept', 28: 'vingt-huit', 29: 'vingt-neuf', 30: 'trente'
+  };
+
+  const CUSTOMERS = [
+    { name: 'Camille', emoji: '👩‍🎨' },
+    { name: 'Lucas', emoji: '🧑‍🎓' },
+    { name: 'Chloé', emoji: '👩‍💼' },
+    { name: 'Antoine', emoji: '🧔‍♂️' },
+    { name: 'Manon', emoji: '👱‍♀️' },
+    { name: 'Hugo', emoji: '🕵️‍♂️' },
+    { name: 'Léa', emoji: '👩‍🎤' },
+    { name: 'Monsieur Martin', emoji: '👴' },
+    { name: 'Madame Dubois', emoji: '👵' }
+  ];
+
+  const PHRASES = [
+    { fr: 'Je voudrais...', no: 'Jeg vil gjerne ha...' },
+    { fr: "J'aimerais...", no: 'Jeg skulle gjerne hatt...' },
+    { fr: 'Pour moi...', no: 'Til meg...' },
+    { fr: "s'il vous plaît", no: 'vær så snill' },
+    { fr: 'mais pas de...', no: 'men IKKE noe...' },
+    { fr: 'et sans...', no: 'og UTEN...' },
+    { fr: 'Ça fait combien ?', no: 'Hvor mye blir det?' },
+    { fr: 'Merci beaucoup !', no: 'Tusen takk!' }
+  ];
+
+  // --- STATE ---
+  let state = {
+    mode: 'rush',
+    score: 0,
+    euros: 0,
+    customersServed: 0,
+    lives: 3,
+    streak: 1,
+    bestStreak: 1,
+    calmMode: false,
+    whiteboardMode: false,
+    showBreakdown: false,
+    showLabels: true,
+    soundEnabled: true,
+    currentOrder: null, // { wanted: {id: count}, forbidden: [id], text: "", negPhrase: "" }
+    tray: [], // array of item ids
+    timerMax: 30,
+    timerLeft: 30,
+    timerInterval: null,
+    sprintTimeLeft: 120,
+    firstTryOnCurrentCustomer: true,
+    awaitingNextCustomerClick: false,
+    clearConfirmPending: false
+  };
+
+  // --- WEB AUDIO SYNTHESIZER ---
+  let audioCtx = null;
+  function playTone(type) {
+    if (!state.soundEnabled) return;
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'pop') {
+        osc.frequency.setValueAtTime(420, now);
+        osc.frequency.exponentialRampToValueAtTime(680, now + 0.08);
+        gain.gain.setValueAtTime(0.12, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.09);
+        osc.start(now);
+        osc.stop(now + 0.09);
+      } else if (type === 'bell') {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(880, now);
+        osc.frequency.setValueAtTime(1174, now + 0.08);
+        gain.gain.setValueAtTime(0.18, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+        osc.start(now);
+        osc.stop(now + 0.45);
+      } else if (type === 'cash') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(987, now);
+        osc.frequency.setValueAtTime(1318, now + 0.09);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+        osc.start(now);
+        osc.stop(now + 0.4);
+      } else if (type === 'error') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.linearRampToValueAtTime(130, now + 0.25);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.28);
+        osc.start(now);
+        osc.stop(now + 0.28);
+      }
+    } catch (e) {}
+  }
+
+  // --- SPEECH SYNTHESIS (FR-FR) ---
+  function speakFrench(text, rate = 0.92) {
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'fr-FR';
+    utter.rate = rate;
+    const voices = window.speechSynthesis.getVoices();
+    const frVoice = voices.find(v => v.lang.toLowerCase().startsWith('fr'));
+    if (frVoice) utter.voice = frVoice;
+    window.speechSynthesis.speak(utter);
+  }
+
+  function speakOrder(rate) {
+    if (state.currentOrder) {
+      speakFrench(state.currentOrder.text, rate);
+    }
+  }
+
+  // --- INITIALIZATION ---
+  function init() {
+    renderCounter();
+    buildGlossary();
+    renderLeaderboard();
+    syncTopButtonsUI();
+  }
+
+  function renderCounter() {
+    const grid = document.getElementById('itemsGrid');
+    grid.className = 'items-grid' + (state.showLabels ? '' : ' hide-labels');
+    grid.innerHTML = MENU_ITEMS.map(item => `
+      <button class="food-btn" onclick="addToTray('${item.id}')">
+        <span class="food-emoji">${item.emoji}</span>
+        <span class="food-name">${item.fr}</span>
+        <span class="food-price">${item.price} €</span>
+      </button>
+    `).join('');
+  }
+
+  // --- WHITEBOARD & CALM MODE CONTROLS ---
+  function syncTopButtonsUI() {
+    const btnCalm = document.getElementById('btnCalm');
+    btnCalm.textContent = state.calmMode ? '🧘 Rolig modus: PÅ' : '🧘 Rolig modus: AV';
+    btnCalm.classList.toggle('active', state.calmMode);
+
+    const btnWhiteboard = document.getElementById('btnWhiteboard');
+    btnWhiteboard.textContent = state.whiteboardMode ? '👨‍🏫 Tavlemodus: PÅ' : '👨‍🏫 Tavlemodus: AV';
+    btnWhiteboard.classList.toggle('teacher-active', state.whiteboardMode);
+
+    document.body.classList.toggle('whiteboard-active', state.whiteboardMode);
+
+    const timerWrap = document.getElementById('timerWrap');
+    const calmBadge = document.getElementById('calmStatusBadge');
+    if (timerWrap && calmBadge) {
+      const noTimePressure = state.calmMode || state.whiteboardMode;
+      timerWrap.style.display = noTimePressure ? 'none' : 'block';
+      calmBadge.style.display = noTimePressure ? 'inline-block' : 'none';
+      calmBadge.textContent = state.whiteboardMode
+        ? '👨‍🏫 Tavlemodus aktiv – Ingen tidsfrist'
+        : '🧘 Rolig modus aktiv – Ingen tidsfrist';
+    }
+
+    updateTeacherToolbarUI();
+  }
+
+  function toggleCalmMode() {
+    state.calmMode = !state.calmMode;
+    syncTopButtonsUI();
+    updateHUD();
+  }
+
+  function toggleWhiteboardMode() {
+    state.whiteboardMode = !state.whiteboardMode;
+    if (state.whiteboardMode) {
+      state.calmMode = true;
+      state.showBreakdown = true;
+      // If currently on the start menu, jump straight into a level 1 whiteboard session
+      if (document.getElementById('screenMenu').classList.contains('active')) {
+        startGame('lvl1');
+      }
+    }
+    syncTopButtonsUI();
+    renderBreakdown();
+    updateHUD();
+  }
+
+  function startWhiteboardSession() {
+    state.whiteboardMode = true;
+    state.calmMode = true;
+    state.showBreakdown = true;
+    syncTopButtonsUI();
+    startGame('lvl1');
+  }
+
+  function toggleBreakdown() {
+    state.showBreakdown = !state.showBreakdown;
+    updateTeacherToolbarUI();
+    renderBreakdown();
+  }
+
+  function switchTeacherLevel(lvlMode) {
+    state.mode = lvlMode;
+    updateTeacherToolbarUI();
+    updateHUD();
+    nextCustomer();
+  }
+
+  function updateTeacherToolbarUI() {
+    const btnBreak = document.getElementById('btnToggleBreakdown');
+    if (btnBreak) {
+      btnBreak.classList.toggle('active', state.showBreakdown);
+      btnBreak.textContent = state.showBreakdown ? '🔍 Skjul språkhjelp' : '🔍 Vis språkhjelp / struktur';
+    }
+    const effLvl = getEffectiveLevel();
+    ['1', '2', '3'].forEach(n => {
+      const b = document.getElementById('btnTeachLvl' + n);
+      if (b) b.classList.toggle('active', String(effLvl) === n);
+    });
+  }
+
+  function renderBreakdown() {
+    const box = document.getElementById('grammarBreakdown');
+    if (!box) return;
+    if (!state.whiteboardMode || !state.showBreakdown || !state.currentOrder) {
+      box.classList.remove('show');
+      return;
+    }
+
+    const chips = [];
+    let totalEuros = 0;
+
+    for (const [id, qty] of Object.entries(state.currentOrder.wanted)) {
+      const item = MENU_ITEMS.find(m => m.id === id);
+      const sub = item.price * qty;
+      totalEuros += sub;
+
+      if (qty === 1) {
+        const genderClass = item.gender === 'm' ? 'masc' : 'fem';
+        const genderLabel = item.gender === 'm' ? 'hankjønn (un)' : 'hunkjønn (une)';
+        chips.push(`
+          <span class="g-chip ${genderClass}">
+            ${item.emoji} <strong>${item.fr}</strong> = 1x ${item.no} <em>(${genderLabel}, ${item.price} €)</em>
+          </span>
+        `);
+      } else {
+        const numWord = FRENCH_NUMBERS[qty];
+        chips.push(`
+          <span class="g-chip plural">
+            ${item.emoji} <strong>${numWord} ${item.plural}</strong> = ${qty}x ${item.no.replace(/^(en|et)\s+/i, '')} <em>(flertall -s, ${qty}×${item.price}€ = ${sub} €)</em>
+          </span>
+        `);
+      }
+    }
+
+    state.currentOrder.forbidden.forEach(fId => {
+      const item = MENU_ITEMS.find(m => m.id === fId);
+      chips.push(`
+        <span class="g-chip neg">
+          🚫 <strong>${state.currentOrder.negPhrase}</strong> = IKKE ${item.no}! <em>(Nektelse – skal ikke på brettet)</em>
+        </span>
+      `);
+    });
+
+    const totalWord = FRENCH_NUMBERS[totalEuros] || totalEuros;
+
+    box.innerHTML = `
+      <div style="font-weight: 800; color: #1e3a8a; font-size: 0.88rem; text-transform: uppercase;">
+        🧩 Språklig nedbrytning for klassen:
+      </div>
+      <div class="grammar-chips">${chips.join('')}</div>
+      <div style="margin-top: 8px; font-size: 0.88rem; color: #334155;">
+        💶 <strong>Summen i kassen:</strong> ${totalEuros} € ➔ <em>« Ça fait <strong>${totalWord}</strong> euro${totalEuros > 1 ? 's' : ''} »</em>
+      </div>
+    `;
+    box.classList.add('show');
+  }
+
+  function toggleLabels() {
+    state.showLabels = !state.showLabels;
+    const btn = document.getElementById('btnLabels');
+    btn.textContent = state.showLabels ? '🏷️ Merkelapper: PÅ' : '🏷️ Merkelapper: AV';
+    btn.classList.toggle('active', state.showLabels);
+    renderCounter();
+  }
+
+  function toggleSound() {
+    state.soundEnabled = !state.soundEnabled;
+    const btn = document.getElementById('btnSound');
+    btn.textContent = state.soundEnabled ? '🔊 Lyd: PÅ' : '🔇 Lyd: AV';
+    btn.classList.toggle('active', state.soundEnabled);
+  }
+
+  // --- NAVIGATION ---
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  function showMenu() {
+    clearInterval(state.timerInterval);
+    document.getElementById('caisseModal').classList.remove('show');
+    renderLeaderboard();
+    showScreen('screenMenu');
+  }
+
+  function restartSameMode() {
+    startGame(state.mode);
+  }
+
+  // --- START GAME ---
+  function startGame(mode) {
+    state.mode = mode;
+    state.score = 0;
+    state.euros = 0;
+    state.customersServed = 0;
+    state.lives = 3;
+    state.streak = 1;
+    state.bestStreak = 1;
+    state.sprintTimeLeft = 120;
+    state.awaitingNextCustomerClick = false;
+
+    // Respect teacher's Calm Mode / Whiteboard Mode in ALL modes (never force it off!)
+    syncTopButtonsUI();
+    updateHUD();
+    showScreen('screenGame');
+    nextCustomer();
+
+    clearInterval(state.timerInterval);
+    state.timerInterval = setInterval(gameTick, 250);
+  }
+
+  function updateHUD() {
+    const modeLabel = document.getElementById('hudModeLabel');
+    const livesEl = document.getElementById('hudLives');
+
+    if (state.whiteboardMode) {
+      const lvl = getEffectiveLevel();
+      modeLabel.textContent = '👨‍🏫 Tavlemodus';
+      livesEl.textContent = `Nivå ${lvl} (Uten tid)`;
+    } else if (state.mode === 'rush') {
+      modeLabel.textContent = state.calmMode ? 'Rushtid (Rolig)' : 'Liv igjen (Rushtid)';
+      livesEl.textContent = '❤️'.repeat(Math.max(0, state.lives)) + '🖤'.repeat(Math.max(0, 3 - state.lives));
+    } else if (state.mode === 'sprint') {
+      modeLabel.textContent = state.calmMode ? 'Duell (Pauset)' : 'Tid igjen (Duell)';
+      const mins = Math.floor(state.sprintTimeLeft / 60);
+      const secs = Math.floor(state.sprintTimeLeft % 60).toString().padStart(2, '0');
+      livesEl.textContent = state.calmMode ? `🧘 ${mins}:${secs}` : `⏱️ ${mins}:${secs}`;
+    } else {
+      modeLabel.textContent = 'Treningsmodus';
+      livesEl.textContent = state.mode === 'lvl1' ? 'Nivå 1' : state.mode === 'lvl2' ? 'Nivå 2' : 'Nivå 3';
+    }
+
+    document.getElementById('hudScore').textContent = state.score;
+    document.getElementById('hudEuros').textContent = state.euros + ' €';
+    document.getElementById('hudCustomers').textContent = state.customersServed;
+    document.getElementById('hudStreak').textContent = `🔥 x${state.streak}`;
+  }
+
+  // --- GENERATE CUSTOMER ORDER ---
+  function getEffectiveLevel() {
+    if (state.mode === 'lvl1') return 1;
+    if (state.mode === 'lvl2') return 2;
+    if (state.mode === 'lvl3') return 3;
+    if (state.mode === 'rush') {
+      if (state.customersServed < 3) return 1;
+      if (state.customersServed < 6) return 2;
+      return 3;
+    }
+    if (state.mode === 'sprint') {
+      if (state.customersServed < 2) return 1;
+      if (state.customersServed < 5) return 2;
+      return 3;
+    }
+    return 1;
+  }
+
+  function nextCustomer() {
+    hideFeedback();
+    state.tray = [];
+    state.firstTryOnCurrentCustomer = true;
+    state.awaitingNextCustomerClick = false;
+    renderTray();
+
+    const cust = CUSTOMERS[Math.floor(Math.random() * CUSTOMERS.length)];
+    document.getElementById('custEmoji').textContent = cust.emoji;
+    document.getElementById('custName').textContent = cust.name;
+
+    const lvl = getEffectiveLevel();
+    const shuffled = [...MENU_ITEMS].sort(() => Math.random() - 0.5);
+
+    const numWanted = lvl === 1 ? (Math.random() < 0.45 ? 1 : 2) : (Math.random() < 0.4 ? 2 : 3);
+    const wantedItems = shuffled.slice(0, numWanted);
+    const wantedMap = {};
+    const parts = [];
+
+    wantedItems.forEach(item => {
+      let qty = 1;
+      if (lvl >= 2 && Math.random() < 0.45) {
+        qty = Math.random() < 0.75 ? 2 : 3;
+      }
+      wantedMap[item.id] = qty;
+      if (qty === 1) {
+        parts.push(item.fr);
+      } else {
+        const numWord = qty === 2 ? 'deux' : 'trois';
+        parts.push(`${numWord} ${item.plural}`);
+      }
+    });
+
+    const greetings = ['Bonjour !', 'Salut !', 'Bonsoir !', 'Bonjour, excusez-moi !'];
+    const intros = ['Je voudrais', "J'aimerais", 'Je prends', 'Pour moi :'];
+    const greet = greetings[Math.floor(Math.random() * greetings.length)];
+    const intro = intros[Math.floor(Math.random() * intros.length)];
+
+    let orderStr = '';
+    if (parts.length === 1) {
+      orderStr = parts[0];
+    } else if (parts.length === 2) {
+      orderStr = `${parts[0]} et ${parts[1]}`;
+    } else {
+      orderStr = `${parts[0]}, ${parts[1]} et ${parts[2]}`;
+    }
+
+    const forbidden = [];
+    let negText = '';
+    let cleanNegPhrase = '';
+    if (lvl === 3) {
+      const trapItem = shuffled[numWanted];
+      forbidden.push(trapItem.id);
+      if (Math.random() < 0.5) {
+        cleanNegPhrase = `mais pas ${trapItem.neg}`;
+        negText = `, ${cleanNegPhrase}`;
+      } else {
+        const bareNoun = trapItem.fr.replace(/^une?\s+/i, '');
+        cleanNegPhrase = `et sans ${bareNoun}`;
+        negText = `, ${cleanNegPhrase}`;
+      }
+    }
+
+    const fullText = `${greet} ${intro} ${orderStr}${negText}, s'il vous plaît.`;
+    state.currentOrder = {
+      wanted: wantedMap,
+      forbidden: forbidden,
+      text: fullText,
+      negPhrase: cleanNegPhrase
+    };
+
+    document.getElementById('orderText').textContent = `« ${fullText} »`;
+
+    // Set customer patience timer
+    if (state.mode === 'rush') {
+      state.timerMax = Math.max(11, 32 - state.customersServed * 1.8);
+    } else {
+      state.timerMax = 30;
+    }
+    state.timerLeft = state.timerMax;
+    updateTimerBar();
+    updateTeacherToolbarUI();
+    renderBreakdown();
+    playTone('bell');
+  }
+
+  // --- TIMER LOOP ---
+  function gameTick() {
+    if (state.calmMode || state.whiteboardMode) return;
+    if (state.awaitingNextCustomerClick) return;
+    if (document.getElementById('caisseModal').classList.contains('show')) return;
+    if (document.getElementById('glossaryModal').classList.contains('show')) return;
+
+    if (state.mode === 'sprint') {
+      state.sprintTimeLeft -= 0.25;
+      updateHUD();
+      if (state.sprintTimeLeft <= 0) {
+        endGame('Tiden er ute! 2-minutters duellen er ferdig.');
+        return;
+      }
+    }
+
+    state.timerLeft -= 0.25;
+    updateTimerBar();
+    if (state.timerLeft <= 0) {
+      handleMistake('⏰ Tiden gikk ut! Kunden gikk sin vei (« Trop lent ! »).', true);
+    }
+  }
+
+  function updateTimerBar() {
+    const bar = document.getElementById('timerBar');
+    const pct = Math.max(0, (state.timerLeft / state.timerMax) * 100);
+    bar.style.width = pct + '%';
+    if (pct > 50) bar.style.backgroundColor = '#1f7a4c';
+    else if (pct > 25) bar.style.backgroundColor = '#eab308';
+    else bar.style.backgroundColor = '#dc2626';
+  }
+
+  // --- TRAY MANAGEMENT ---
+  function addToTray(itemId) {
+    if (state.awaitingNextCustomerClick) return;
+    if (state.tray.length >= 9) return;
+    state.tray.push(itemId);
+    playTone('pop');
+    renderTray();
+  }
+
+  function removeFromTray(index) {
+    if (state.awaitingNextCustomerClick) return;
+    state.tray.splice(index, 1);
+    playTone('pop');
+    renderTray();
+  }
+
+  function clearTray() {
+    if (state.awaitingNextCustomerClick) return;
+    state.tray = [];
+    renderTray();
+  }
+
+  function renderTray() {
+    const surf = document.getElementById('traySurface');
+    document.getElementById('trayCount').textContent = `${state.tray.length} varer`;
+    if (state.tray.length === 0) {
+      surf.innerHTML = `<div class="tray-empty">Brettet er tomt. Klikk på matvarene til venstre!</div>`;
+      return;
+    }
+    surf.innerHTML = state.tray.map((id, idx) => {
+      const item = MENU_ITEMS.find(m => m.id === id);
+      return `<div class="tray-pill" onclick="removeFromTray(${idx})" title="Klikk for å fjerne">
+        <span>${item.emoji}</span>
+        <span>${item.fr}</span>
+        <span style="color:#dc2626; font-size:0.8rem;">✖</span>
+      </div>`;
+    }).join('');
+  }
+
+  // --- VALIDATE TRAY & OPEN CAISSE ---
+  function checkTrayAndOpenCaisse() {
+    if (state.awaitingNextCustomerClick) {
+      nextCustomer();
+      return;
+    }
+    if (state.tray.length === 0) {
+      showFeedback('Du må legge minst én vare på brettet først!', 'error');
+      playTone('error');
+      return;
+    }
+
+    const trayCounts = {};
+    state.tray.forEach(id => { trayCounts[id] = (trayCounts[id] || 0) + 1; });
+
+    // 1. Check forbidden negation items first
+    for (const fId of state.currentOrder.forbidden) {
+      if (trayCounts[fId]) {
+        const item = MENU_ITEMS.find(m => m.id === fId);
+        handleMistake(`Obs! Kunden sa « pas ${item.neg} / sans » – de ville IKKE ha ${item.no} (${item.fr})!`, false);
+        return;
+      }
+    }
+
+    // 2. Check unwanted items
+    for (const id of Object.keys(trayCounts)) {
+      if (!state.currentOrder.wanted[id]) {
+        const item = MENU_ITEMS.find(m => m.id === id);
+        handleMistake(`Kunden bestilte ikke ${item.fr} (${item.no}). Fjern den fra brettet!`, false);
+        return;
+      }
+    }
+
+    // 3. Check quantities
+    for (const [id, neededQty] of Object.entries(state.currentOrder.wanted)) {
+      const actualQty = trayCounts[id] || 0;
+      const item = MENU_ITEMS.find(m => m.id === id);
+      if (actualQty === 0) {
+        handleMistake(`Du mangler ${item.fr} (${item.no}) på brettet!`, false);
+        return;
+      }
+      if (actualQty !== neededQty) {
+        const frNum = FRENCH_NUMBERS[neededQty];
+        handleMistake(`Feil antall av ${item.fr}: Kunden ba om « ${frNum} » (${neededQty} stk), men du har lagt på ${actualQty} stk.`, false);
+        return;
+      }
+    }
+
+    // Everything on tray is correct -> Open La Caisse!
+    openCaisseModal();
+  }
+
+  function openCaisseModal() {
+    let total = 0;
+    const linesHtml = [];
+    for (const [id, qty] of Object.entries(state.currentOrder.wanted)) {
+      const item = MENU_ITEMS.find(m => m.id === id);
+      const sub = item.price * qty;
+      total += sub;
+      linesHtml.push(`
+        <div class="receipt-line">
+          <span>${qty}x ${item.emoji} ${item.fr} (${item.price} €)</span>
+          <strong>${sub} €</strong>
+        </div>
+      `);
+    }
+
+    document.getElementById('receiptBox').innerHTML = linesHtml.join('');
+
+    // Build 4 French number options
+    const options = new Set([total]);
+    while (options.size < 4) {
+      const offset = (Math.floor(Math.random() * 7) - 3);
+      const candidate = total + offset;
+      if (candidate >= 1 && candidate <= 30 && candidate !== total) {
+        options.add(candidate);
+      } else {
+        options.add(Math.max(1, Math.min(30, total + options.size)));
+      }
+    }
+
+    const shuffledOpts = Array.from(options).sort(() => Math.random() - 0.5);
+    document.getElementById('caisseOptions').innerHTML = shuffledOpts.map(num => {
+      const word = FRENCH_NUMBERS[num] || num;
+      const euroWord = num > 1 ? 'euros' : 'euro';
+      return `<button class="caisse-btn" onclick="submitPayment(${num}, ${total})">
+        « Ça fait ${word} ${euroWord} »
+      </button>`;
+    }).join('');
+
+    document.getElementById('caisseModal').classList.add('show');
+  }
+
+  function submitPayment(chosen, correctTotal) {
+    const chosenWord = FRENCH_NUMBERS[chosen] || chosen;
+    const chosenEuroWord = chosen > 1 ? 'euros' : 'euro';
+    speakFrench(`Ça fait ${chosenWord} ${chosenEuroWord}`);
+
+    if (chosen === correctTotal) {
+      document.getElementById('caisseModal').classList.remove('show');
+      playTone('cash');
+
+      const speedBonus = (state.calmMode || state.whiteboardMode)
+        ? 3
+        : Math.max(1, Math.round((state.timerLeft / state.timerMax) * 5));
+      const basePoints = 100 * state.streak;
+      const tipPoints = speedBonus * 10;
+      state.score += basePoints + tipPoints;
+      state.euros += correctTotal + (state.firstTryOnCurrentCustomer ? 2 : 0);
+      state.customersServed += 1;
+
+      if (state.firstTryOnCurrentCustomer) {
+        state.streak = Math.min(5, state.streak + 1);
+        if (state.streak > state.bestStreak) state.bestStreak = state.streak;
+      }
+
+      updateHUD();
+
+      // In Tavlemodus or Calm Mode, let the teacher/student click "Neste kunde ⏭️" when ready
+      if (state.whiteboardMode || state.calmMode) {
+        state.awaitingNextCustomerClick = true;
+        showFeedback(
+          `🎉 Très bien ! « Ça fait ${chosenWord} ${chosenEuroWord} » (${correctTotal} €) er helt riktig!`,
+          'success',
+          true
+        );
+      } else {
+        showFeedback(`🎉 Très bien ! « Merci beaucoup ! » (+${basePoints + tipPoints} poeng)`, 'success', false);
+        setTimeout(() => {
+          nextCustomer();
+        }, 950);
+      }
+    } else {
+      document.getElementById('caisseModal').classList.remove('show');
+      handleMistake(`Feil beløp i kassen! « ${chosenWord} » betyr ${chosen}, men riktig sum er ${correctTotal} €.`, false);
+    }
+  }
+
+  function handleMistake(msg, nextCustImmediately) {
+    playTone('error');
+    state.firstTryOnCurrentCustomer = false;
+    state.streak = 1;
+
+    // Only deduct lives if NOT in Whiteboard/Calm mode
+    if (state.mode === 'rush' && !state.whiteboardMode && !state.calmMode) {
+      state.lives -= 1;
+      updateHUD();
+      if (state.lives <= 0) {
+        endGame('Du gikk tom for liv i Rushtid i Paris!');
+        return;
+      }
+    } else {
+      updateHUD();
+    }
+
+    showFeedback(msg, 'error', false);
+    if (nextCustImmediately) {
+      setTimeout(() => nextCustomer(), 1200);
+    }
+  }
+
+  function showFeedback(msg, type, includeNextButton = false) {
+    const b = document.getElementById('feedbackBanner');
+    b.className = `feedback-banner show ${type}`;
+    if (includeNextButton) {
+      b.innerHTML = `
+        <span>${msg}</span>
+        <button class="btn-next-customer" onclick="nextCustomer()">Neste kunde ⏭️</button>
+      `;
+    } else {
+      b.innerHTML = `<span>${msg}</span>`;
+    }
+  }
+
+  function hideFeedback() {
+    document.getElementById('feedbackBanner').className = 'feedback-banner';
+  }
+
+  // --- END GAME & DIPLOMA ---
+  function getFrenchRank(score) {
+    if (score >= 1500) return '👑 Légende de Paris';
+    if (score >= 1000) return '⭐⭐⭐ Grand Chef de Cuisine';
+    if (score >= 600) return '⭐⭐ Chef de Rang';
+    if (score >= 300) return '⭐ Serveur de Bistro';
+    return '🥐 Stagiaire au Café';
+  }
+
+  function endGame(reasonText) {
+    clearInterval(state.timerInterval);
+    document.getElementById('caisseModal').classList.remove('show');
+
+    document.getElementById('endReasonText').textContent = reasonText;
+    document.getElementById('endScore').textContent = state.score;
+    document.getElementById('endEuros').textContent = state.euros + ' €';
+    document.getElementById('endCustomers').textContent = state.customersServed;
+    document.getElementById('endBestStreak').textContent = 'x' + state.bestStreak;
+    document.getElementById('endRankBadge').textContent = getFrenchRank(state.score);
+
+    const code = `CP-${state.mode.toUpperCase()}-${state.score}-${state.customersServed * 7 + 13}`;
+    document.getElementById('verifyCode').textContent = `BEVIS-KODE: ${code}`;
+    document.getElementById('saveScoreBox').style.display = 'flex';
+
+    showScreen('screenEnd');
+  }
+
+  // --- HIGHSCORE STORAGE ---
+  function saveScore() {
+    const input = document.getElementById('playerNameInput');
+    const name = (input.value || 'Anonym Elev').trim();
+    const list = JSON.parse(localStorage.getItem('cafePaniqueScores') || '[]');
+    const modeName = state.mode === 'rush' ? '🔥 Rushtid' : state.mode === 'sprint' ? '⚡ 2-Min Duell' : state.mode.toUpperCase();
+
+    list.push({
+      name,
+      mode: modeName,
+      score: state.score,
+      customers: state.customersServed,
+      rank: getFrenchRank(state.score)
+    });
+
+    list.sort((a, b) => b.score - a.score);
+    localStorage.setItem('cafePaniqueScores', JSON.stringify(list.slice(0, 15)));
+    document.getElementById('saveScoreBox').style.display = 'none';
+    renderLeaderboard();
+  }
+
+  function renderLeaderboard() {
+    const tbody = document.getElementById('leaderboardBody');
+    const list = JSON.parse(localStorage.getItem('cafePaniqueScores') || '[]');
+    if (list.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; color:#888;">Ingen poengsummer lagret ennå. Spill en runde for å komme på pallen!</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = list.map((row, i) => `
+      <tr>
+        <td><strong>${i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : i + 1}</strong></td>
+        <td><strong>${row.name}</strong></td>
+        <td>${row.mode}</td>
+        <td style="color:var(--bistro-red); font-weight:800;">${row.score}</td>
+        <td>${row.customers}</td>
+        <td>${row.rank}</td>
+      </tr>
+    `).join('');
+  }
+
+  function clearLeaderboard() {
+    const btn = document.getElementById('btnClearScores');
+    if (!state.clearConfirmPending) {
+      state.clearConfirmPending = true;
+      btn.textContent = 'Sikker? Klikk igjen';
+      btn.style.background = '#fee2e2';
+      btn.style.color = '#991b1b';
+      setTimeout(() => {
+        state.clearConfirmPending = false;
+        btn.textContent = 'Nullstill liste';
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 3000);
+      return;
+    }
+    state.clearConfirmPending = false;
+    btn.textContent = 'Nullstill liste';
+    btn.style.background = '';
+    btn.style.color = '';
+    localStorage.removeItem('cafePaniqueScores');
+    renderLeaderboard();
+  }
+
+  // --- GLOSSARY MODAL ---
+  function buildGlossary() {
+    document.getElementById('glossaryFood').innerHTML = MENU_ITEMS.map(item => `
+      <div class="glossary-item" onclick="speakFrench('${item.fr.replace(/'/g, "\\'")}')">
+        <span>${item.emoji} <strong>${item.fr}</strong><br><small style="color:#666;">${item.no}</small></span>
+        <span>🔊</span>
+      </div>
+    `).join('');
+
+    document.getElementById('glossaryPhrases').innerHTML = PHRASES.map(p => `
+      <div class="glossary-item" onclick="speakFrench('${p.fr.replace(/'/g, "\\'")}')">
+        <span><strong>${p.fr}</strong><br><small style="color:#666;">${p.no}</small></span>
+        <span>🔊</span>
+      </div>
+    `).join('');
+
+    const numsHtml = [];
+    for (let i = 1; i <= 30; i++) {
+      const w = FRENCH_NUMBERS[i];
+      numsHtml.push(`
+        <div class="glossary-item" onclick="speakFrench('${w}')">
+          <span><strong>${i}</strong> = ${w}</span>
+          <span>🔊</span>
+        </div>
+      `);
+    }
+    document.getElementById('glossaryNumbers').innerHTML = numsHtml.join('');
+  }
+
+  function openGlossary() {
+    document.getElementById('glossaryModal').classList.add('show');
+  }
+
+  function closeGlossary() {
+    document.getElementById('glossaryModal').classList.remove('show');
+  }
+
+  // --- DOWNLOAD SELF-CONTAINED HTML FILE ---
+  function downloadHtmlFile() {
+    const clone = document.documentElement.cloneNode(true);
+    // Ensure downloaded file opens cleanly on the main menu
+    clone.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    const menuScreen = clone.querySelector('#screenMenu');
+    if (menuScreen) menuScreen.classList.add('active');
+    clone.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('show'));
+    const bodyEl = clone.querySelector('body');
+    if (bodyEl) bodyEl.classList.remove('whiteboard-active');
+
+    const htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
+    const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'cafe_panique.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  window.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
